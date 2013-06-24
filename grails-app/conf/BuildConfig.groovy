@@ -30,12 +30,6 @@ grails.project.dependency.resolution = {
 
         mavenLocal()
         mavenCentral()
-
-        // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
-        //mavenRepo "http://snapshots.repository.codehaus.org"
-        //mavenRepo "http://repository.codehaus.org"
-        //mavenRepo "http://download.java.net/maven/2/"
-        //mavenRepo "http://repository.jboss.com/maven2/"
     }
 
     dependencies {
@@ -59,5 +53,14 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.2.1"
 
         compile ':cache:1.0.1'
+        
+        // Plugins rajoutés manuellement
+        // DKA - Spring Security pour le login
+        runtime ':resources:1.2'
+        runtime ':cached-resources:1.0'
+        runtime ':zipped-resources:1.0'
+        runtime ":yui-minify-resources:0.1.4"
+        compile ':cache-headers:1.1.5'
+        compile ':spring-security-core:1.2.7.3'
     }
 }
