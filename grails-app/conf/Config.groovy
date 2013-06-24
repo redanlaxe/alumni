@@ -94,5 +94,5 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.miage.alumni.Personne'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.miage.alumni.PersonneRole'
 grails.plugins.springsecurity.authority.className = 'com.miage.alumni.Role'
-grails.plugins.springsecurity.successHandler.defaultTargetUrl = '/Home'
+grails.plugins.springsecurity.successHandler.defaultTargetUrl = '/home'
 
