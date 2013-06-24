@@ -10,10 +10,6 @@ class Personne {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
-        
-        // Custom Fields
-        String firstName
-        String lastName
 
 	static constraints = {
 		username blank: false, unique: true
