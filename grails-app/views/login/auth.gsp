@@ -10,7 +10,7 @@
 	}
 
 	#login .inner {
-		width: 340px;
+		width: 38%;
 		padding-bottom: 6px;
 		margin: 60px auto;
 		text-align: left;
