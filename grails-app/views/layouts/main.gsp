@@ -12,10 +12,10 @@
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
     <link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
     <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-    <r:require modules="bootstrap"/>
-    <r:layoutResources />
-    <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">   
-    <g:layoutHead/>  
+  <r:require modules="bootstrap"/>
+  <r:layoutResources />
+  <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">   
+  <g:layoutHead/>  
 </head>
 <body>
   <div id="grailsLogo" role="banner" class="row-fluid">
@@ -53,13 +53,20 @@
           </div>
           <div class="span1" style="background-color: black; height: 77px; width: 4px; margin: 0px;">
           </div>
+          <div class="span3" style="margin: 0px;">
+            <li class="">
+            <g:link controller="inscription">Inscription</g:link>
+            </li>
+          </div>
+          <div class="span1" style="background-color: black; height: 77px; width: 4px; margin: 0px;">
+          </div>
         </div>
       </ul>
     </div>
   </div> 
   <div class="row-fluid">
     <div class="span12 content">
-         <g:layoutBody/>
+      <g:layoutBody/>
     </div>
   </div>
   <div class="footer" role="contentinfo"></div>
