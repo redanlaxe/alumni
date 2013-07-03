@@ -25,7 +25,7 @@
                     <ul class="nav nav-tabs" id="stats">
                         <li class="active"><a href="#salaire">Salaire</a></li>
                         <li><a href="#competence">Compétences</a></li>
-                        <li><a href="#contrat">Type de contrat</a></li>
+                        <li><a href="#contrat">Contrat</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="salaire">
@@ -151,7 +151,6 @@
                         <div class="tab-pane" id="contrat">
                             <div class="row-fluid">
                                 <div class="span4">
-                                    <h2>Types de contrat toute période</h2>
                                     <logic:present name="contrats">
                                         <bean:size id="size" name="contrats"/>
                                         <logic:equal name="size" value="0">
@@ -160,23 +159,48 @@
                                             </b>
                                         </logic:equal>
                                         <logic:greaterThan name="size" value="0">
-                                            <table class="table table-striped table-bordered">
-                                                <tr>
-                                                    <th>Type de contrat</th>
-                                                    <th>Quantité</th>
-                                                </tr>
-                                                <logic:iterate id="contrat" name="contrats">
-                                                    <tr>
-                                                        <td><bean:write name="contrat" property="key"/></td>
-                                                        <td><bean:write name="contrat" property="value"/></td>
-                                                    </tr>
-                                                </logic:iterate>
-                                            </table>
+                                            <div id="contratTout" style="width:21%; height:250px;"></div>
+                                    <script>
+                                            $('#contratTout').highcharts({
+                                                chart: {
+                                                    plotBackgroundColor: null,
+                                                    plotBorderWidth: null,
+                                                    plotShadow: false
+                                                },
+                                                title: {
+                                                    text: 'Type de contrat toute période'
+                                                },
+                                                tooltip: {
+                                                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                                },
+                                                plotOptions: {
+                                                    pie: {
+                                                        allowPointSelect: true,
+                                                        cursor: 'pointer',
+                                                        dataLabels: {
+                                                            enabled: true,
+                                                            color: '#000000',
+                                                            connectorColor: '#000000',
+                                                            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                                                        }
+                                                    }
+                                                },
+                                                series: [{
+                                                        type: 'pie',
+                                                        name: 'Ratio',
+                                                        data: [
+                                                            <logic:iterate id="contrat" name="contrats">
+                                                                ['<bean:write name="contrat" property="key"/>',
+                                                                <bean:write name="contrat" property="value"/>],
+                                                            </logic:iterate>
+                                                        ]
+                                                    }]
+                                            });
+                                    </script>
                                         </logic:greaterThan>
                                     </logic:present>
                                 </div>
                                 <div class="span4">
-                                    <h2>Types de contrat à l'embauche</h2>
                                     <logic:present name="firstContrats">
                                         <bean:size id="size" name="firstContrats"/>
                                         <logic:equal name="size" value="0">
@@ -185,23 +209,48 @@
                                             </b>
                                         </logic:equal>
                                         <logic:greaterThan name="size" value="0">
-                                            <table class="table table-striped table-bordered">
-                                                <tr>
-                                                    <th>Type de contrat</th>
-                                                    <th>Quantité</th>
-                                                </tr>
-                                                <logic:iterate id="firstContrat" name="firstContrats">
-                                                    <tr>
-                                                        <td><bean:write name="firstContrat" property="key"/></td>
-                                                        <td><bean:write name="firstContrat" property="value"/></td>
-                                                    </tr>
-                                                </logic:iterate>
-                                            </table>
+                                            <div id="contratp" style="width:21%; height:250px;"></div>
+                                    <script>
+                                            $('#contratp').highcharts({
+                                                chart: {
+                                                    plotBackgroundColor: null,
+                                                    plotBorderWidth: null,
+                                                    plotShadow: false
+                                                },
+                                                title: {
+                                                    text: 'Type de contrat 1ère embauche'
+                                                },
+                                                tooltip: {
+                                                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                                },
+                                                plotOptions: {
+                                                    pie: {
+                                                        allowPointSelect: true,
+                                                        cursor: 'pointer',
+                                                        dataLabels: {
+                                                            enabled: true,
+                                                            color: '#000000',
+                                                            connectorColor: '#000000',
+                                                            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                                                        }
+                                                    }
+                                                },
+                                                series: [{
+                                                        type: 'pie',
+                                                        name: 'Ratio',
+                                                        data: [
+                                                            <logic:iterate id="firstContrat" name="firstContrats">
+                                                                ['<bean:write name="firstContrat" property="key"/>',
+                                                                <bean:write name="firstContrat" property="value"/>],
+                                                            </logic:iterate>
+                                                        ]
+                                                    }]
+                                            });
+                                    </script>
                                         </logic:greaterThan>
                                     </logic:present>
                                 </div>
                                 <div class="span4">
-                                    <h2>Types de contrat actuel</h2>
                                     <logic:present name="lastContrats">
                                         <bean:size id="size" name="lastContrats"/>
                                         <logic:equal name="size" value="0">
@@ -210,18 +259,44 @@
                                             </b>
                                         </logic:equal>
                                         <logic:greaterThan name="size" value="0">
-                                            <table class="table table-striped table-bordered">
-                                                <tr>
-                                                    <th>Type de contrat</th>
-                                                    <th>Quantité</th>
-                                                </tr>
-                                                <logic:iterate id="lastContrat" name="lastContrats">
-                                                    <tr>
-                                                        <td><bean:write name="lastContrat" property="key"/></td>
-                                                        <td><bean:write name="lastContrat" property="value"/></td>
-                                                    </tr>
-                                                </logic:iterate>
-                                            </table>
+                                            <div id="contratl" style="width:21%; height:250px;"></div>
+                                    <script>
+                                            $('#contratl').highcharts({
+                                                chart: {
+                                                    plotBackgroundColor: null,
+                                                    plotBorderWidth: null,
+                                                    plotShadow: false
+                                                },
+                                                title: {
+                                                    text: 'Type de contrat actuel'
+                                                },
+                                                tooltip: {
+                                                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                                },
+                                                plotOptions: {
+                                                    pie: {
+                                                        allowPointSelect: true,
+                                                        cursor: 'pointer',
+                                                        dataLabels: {
+                                                            enabled: true,
+                                                            color: '#000000',
+                                                            connectorColor: '#000000',
+                                                            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                                                        }
+                                                    }
+                                                },
+                                                series: [{
+                                                        type: 'pie',
+                                                        name: 'Ratio',
+                                                        data: [
+                                                            <logic:iterate id="lastContrat" name="lastContrats">
+                                                                ['<bean:write name="lastContrat" property="key"/>',
+                                                                <bean:write name="lastContrat" property="value"/>],
+                                                            </logic:iterate>
+                                                        ]
+                                                    }]
+                                            });
+                                    </script>
                                         </logic:greaterThan>
                                     </logic:present>
                                 </div>

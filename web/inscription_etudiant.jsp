@@ -79,9 +79,9 @@
                                     <label class="checkbox"></html:checkbox><bean:message key="label.souhaiteEmploi" /></label>
                                 <html:hidden property="compte" value="etudiant"/>	
                             </div>
-                        </div>
+                        </div><br>
                         <div class="control-group">
-                            <div class="controls">
+                            <div class="controls end">
                                 <html:submit value="S'inscrire" styleClass="box btn btn-large btn-primary"/>	
                             </div>
                         </div>
