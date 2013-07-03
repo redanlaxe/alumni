@@ -59,7 +59,7 @@
                 <div class="pagination">
                     <ul>
                         <logic:iterate id="nbPageId" name="nbPage">
-                            <li><a href="annuairepublic.do?p=<bean:write name="nbPageId"/>"><bean:write name="nbPageId"/></a></li>
+                            <li><a href="annuairepublic.do?p=<bean:write name="nbPageId"/>">${nbPageId+1}</a></li>
                             </logic:iterate>
                     </ul>
                 </div>
@@ -68,7 +68,7 @@
         <%@include file="includes/footer.jsp" %>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>
-                                    $("#anneedeb").attr("placeholder", "Année d'étude")
+             $("#anneedeb").attr("placeholder", "Année d'étude")
         </script>
     </body>
 </html>

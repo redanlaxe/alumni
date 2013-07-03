@@ -73,7 +73,7 @@
                 <div class="pagination">
                     <ul>
                         <logic:iterate id="nbPageId" name="nbPage">
-                            <li><a href="annuairepublic.do?p=<bean:write name="nbPageId"/>"><bean:write name="nbPageId"/></a></li>
+                            <li><a href="annuairepublic.do?p=<bean:write name="nbPageId"/>">${nbPageId+1}</a></li>
                         </logic:iterate>
                     </ul>
                 </div>
