@@ -1,8 +1,3 @@
-<%-- 
-    Document   : VALIDATION
-    Created on : 10 avr. 2013, 23:44:34
-    Author     : toutgrego
---%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>

@@ -8,7 +8,6 @@ import com.alumni.mapping.Entreprise;
 import com.alumni.mapping.Etudiant;
 import com.alumni.mapping.Salaire;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

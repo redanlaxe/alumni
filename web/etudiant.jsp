@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Etudiant
-    Created on : 4 avr. 2013, 21:10:36
-    Author     : Gregory
---%>
-
 <%@page import="com.alumni.mapping.Etudiant"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
