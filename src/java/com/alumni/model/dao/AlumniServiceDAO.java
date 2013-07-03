@@ -19,7 +19,7 @@ import java.util.Map;
 
 /**
  *
- * @author Gregory
+ * @author Desvides
  */
 public interface AlumniServiceDAO {
 
