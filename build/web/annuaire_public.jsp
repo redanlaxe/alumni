@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Annuaire Public</title>
         <%@include file="includes/header.jsp" %>
     </head>
     <body>
@@ -44,7 +44,7 @@
                                 <td><a href="profil.do?id=<bean:write name="etudiant" property="idetudiant"/>">Profil</a></td>
                                 <td><bean:write name="etudiant" property="prenom"/></td>
                                 <td><bean:write name="etudiant" property="nom"/></td>
-                                <td><a target="_blank" href="mailto:<bean:write name="etudiant" property="mail"/>" onclick="window.open(this.href, '', config = 'height=500, width=800')">Envoyer un e-mail</a></td>
+                                <td><a target="_blank" href="mailto:<bean:write name="etudiant" property="mail"/>">Envoyer un e-mail</a></td>
                                 <td><bean:write name="etudiant" property="telephone"/></td>
                                 <td><a href="<bean:write name="etudiant" property="cv"/>">CV</a></td>
                                 <td><logic:present name="etudiant" property="souhaiteemploi">
