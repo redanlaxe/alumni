@@ -105,7 +105,6 @@
         <forward name="stats"                           path="/statistique.do"/>
         <forward name="modifProfil"                     path="/modif_profil.jsp"/>
         <forward name="validation"                      path="/validation.do"/>
-        <forward name="generer"                         path="/genererStats.do"/>
         <forward name="deconnexion"                     path="/deconnexion.do"/>
         <forward name="formation"                       path="/formation.jsp"/>
     </global-forwards>
@@ -214,12 +213,6 @@
                 type="com.alumni.controller.Statistique" 
                 name="statistique"
                 input="/stats.jsp" 
-                scope="request">
-        </action>
-		<action path="/genererStats" 
-                type="com.alumni.controller.GenererStats" 
-                name="statistique"
-                input="/statistique.do" 
                 scope="request">
         </action>
         

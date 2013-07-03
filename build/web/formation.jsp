@@ -6,13 +6,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Alumni - Formations</title>
+        <title>Formations</title>
         <%@include file="includes/header.jsp" %> 
         <link rel="stylesheet" href="css/jquery-ui-1.10.2.custom.min.css">
     </head>
     <body>
         <%@include file="includes/menu.jsp" %> 
-        <h1>Mes Formations</h1>
+        <h1>Formations</h1>
         <div class="experience">
             <html:errors/>
             <logic:present name="anneeFormation">

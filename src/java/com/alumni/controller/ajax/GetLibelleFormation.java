@@ -16,7 +16,7 @@ import org.apache.struts.action.ActionMapping;
 
 /**
  *
- * @author Dimitri
+ * @author Desvides
  */
 public class GetLibelleFormation extends SuperAction {
 

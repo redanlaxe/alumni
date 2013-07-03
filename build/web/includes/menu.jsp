@@ -13,7 +13,6 @@
                         <li><html:link forward="annuairepublic">Consulter l'annuaire</html:link></li>
                         <li><html:link forward="validation">Valider</html:link></li>
                         <li><html:link forward="stats">Stats</html:link></a></li> 
-						<li><html:link forward="generer">Générér Excel</html:link></a></li> 
                     <li><html:link forward="deconnexion">Se déconnecter</html:link></li>
                     </logic:present>
                     <logic:present name="contact">

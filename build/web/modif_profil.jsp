@@ -6,13 +6,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Alumni - Completer profil</title>
+        <title>Modifier profil</title>
         <%@include file="includes/header.jsp" %>
         <link rel="stylesheet" href="css/jquery-ui-1.10.2.custom.min.css">
     </head>
     <body>
         <%@include file="includes/menu.jsp" %> 
-        <h1>Completer données personnelles</h1>
+        <h1>Modifier profil</h1>
         <div class="inscription">
             <html:errors/>
             <logic:present name="etudiant">
@@ -51,7 +51,7 @@
                             <html:password styleId="mdp" property="mdp" />
                         </div>
                         <div class="info">
-                            <span>Minimum de 6 caractères</span>
+                            <span>6 caractères minimum</span>
                         </div>
                     </div>
                     <div class="control-group">

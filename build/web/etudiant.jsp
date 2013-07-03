@@ -15,12 +15,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Etudiant</title>
         <%@include file="includes/header.jsp" %>
     </head>
     <body>
         <%@include file="includes/menu.jsp" %> 
-        <h1>Bienvenue dans votre espace</h1>
+        <h1>Bienvenue</h1>
 
         <%@include file="includes/footer.jsp" %>
     </body>

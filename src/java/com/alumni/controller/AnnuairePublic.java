@@ -18,7 +18,7 @@ import org.apache.struts.action.DynaActionForm;
 
 /**
  *
- * @author toutgrego
+ * @author Desvides
  */
 public class AnnuairePublic extends SuperAction {
 

@@ -19,7 +19,7 @@ import org.apache.struts.action.DynaActionForm;
 
 /**
  *
- * @author Gregory
+ * @author Desvides
  */
 public class Formation extends SuperAction {
     /* forward name="success" path="" */

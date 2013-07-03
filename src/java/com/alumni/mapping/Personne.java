@@ -6,7 +6,7 @@ package com.alumni.mapping;
 
 /**
  *
- * @author vincent
+ * @author Desvides
  */
 public abstract class Personne {
 
