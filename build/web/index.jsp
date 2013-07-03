@@ -57,20 +57,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row-fluid">
-                                <div class="span6">
-                                    <html:submit styleClass="box btn btn-large btn-primary" value="Connexion" />
-                                </div>
-                                <div class="span6 resteConnecte">
-                                    <html:checkbox styleId="resteConnecte" property="resteConnecte" value="true"></html:checkbox>
-                                    <label for="resteConnecte"><bean:message key="label.resteConnecte" />
-                                </div>
-                            </div>
-                            <div class="row-fluid forgot">
-                                <div class="span12">
-                                    <html:link styleClass="btn-oublie" forward="forgotmdp">Mot de passe perdu/oublié ?</html:link>
-                                    </div>
-                                </div>
                         </html:form>
                     </div>
                 </div>
