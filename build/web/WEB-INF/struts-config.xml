@@ -10,7 +10,6 @@
         <form-bean name="Connexion" type="org.apache.struts.action.DynaActionForm">
             <form-property name="mail"                     type="java.lang.String"/>
             <form-property name="mdp"                      type="java.lang.String"/>
-            <form-property name="resteConnecte"            type="java.lang.String"/>
         </form-bean>
 		
         <form-bean name="InscriptionFormEtudiant" type="org.apache.struts.action.DynaActionForm">
@@ -97,7 +96,6 @@
         <forward name="index"                           path="/index.jsp"/>
         <forward name="inscription/etudiant"		path="/inscription_etudiant.jsp"/>
         <forward name="inscription/entreprise"		path="/inscription_entreprise.jsp"/>
-        <forward name="forgotmdp"                       path="/forgot.jsp"/>
         <forward name="experience"                      path="/experience.jsp"/>
         <forward name="annuaire"                        path="/annuairepublic.do"/>
         <forward name="annuairepublic"                  path="/annuairepublic.do"/>
