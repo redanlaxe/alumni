@@ -59,15 +59,14 @@
                 <logic:equal name="size" value="0">
                     <b>Aucune expérience</b>
                 </logic:equal>
-
                 <logic:greaterThan name="size" value="0">
                     <table class="table table-striped table-bordered">
-                        <tr>
-                            <th>Entreprise</th>
+                        <tr>                            
                             <th>Poste</th>
                             <th>Type de contrat</th>
                             <th>Salaire</th>
                             <th>Competence</th>
+                            <th>Entreprise</th>
                             <th>Supprimer </th>
                         </tr>
                         <logic:iterate id="experience" name="experiences">

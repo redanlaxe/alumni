@@ -6,13 +6,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Formations</title>
+        <title>Ajouter une formation</title>
         <%@include file="includes/header.jsp" %> 
         <link rel="stylesheet" href="css/jquery-ui-1.10.2.custom.min.css">
     </head>
     <body>
         <%@include file="includes/menu.jsp" %> 
-        <h1>Formations</h1>
+        <h1>Ajouter une formation</h1>
         <div class="experience">
             <html:errors/>
             <logic:present name="anneeFormation">
@@ -60,7 +60,7 @@
                                 <html:submit value="Modifier formation" styleClass="btn btn-large btn-primary"/>
                             </logic:present>
                             <logic:notPresent name="anneeFormation">
-                                <html:submit value="Ajouter formation" styleClass="btn btn-large btn-primary"/>
+                                <html:submit value="Ajouter la formation" styleClass="box btn btn-large btn-primary"/>
                             </logic:notPresent>
 
                         </td>

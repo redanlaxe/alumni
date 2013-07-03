@@ -6,13 +6,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Modifier profil</title>
+        <title>Modifier mon profil</title>
         <%@include file="includes/header.jsp" %>
         <link rel="stylesheet" href="css/jquery-ui-1.10.2.custom.min.css">
     </head>
     <body>
         <%@include file="includes/menu.jsp" %> 
-        <h1>Modifier profil</h1>
+        <h1>Modifier mon profil</h1>
         <div class="inscription">
             <html:errors/>
             <logic:present name="etudiant">
@@ -25,7 +25,7 @@
                 <bean:define id="dateEtu" name="etudiant" property="datenaissance"/>
             </logic:present>
 
-            <div class="span7">
+            <div>
                 <html:form styleClass="box" action="modifProfil">
                     <div class="control-group">
                         <label class="control-label" for="prenom"><bean:message key="label.prenom" /></label>
@@ -81,8 +81,8 @@
                     <div class="control-group">
                         <div class="controls end">
                             <html:checkbox styleId="souhaiteEmploi" property="souhaiteEmploi" value="y">
-                                <label class="checkbox"></html:checkbox><bean:message key="label.souhaiteEmploi" /></label>
-                            <html:submit value="Modifier" styleClass="btn btn-large btn-primary"/>	
+                                <label class="checkbox"></html:checkbox><bean:message key="label.souhaiteEmploi" /></label><br>
+                            <html:submit value="Modifier" styleClass="box btn btn-large btn-primary"/>	
                         </div>
                     </div>
                 </html:form>
