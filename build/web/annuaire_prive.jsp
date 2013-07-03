@@ -6,13 +6,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Annuaire privé</title>
         <%@include file="includes/header.jsp" %>
     </head>
     <body>
         <%@include file="includes/menu.jsp" %>
         <div class="annuaire">
-            <h1>Annuaire prive</h1>
+            <h1>Annuaire privé</h1>
 
             <html:errors/>
 
@@ -25,25 +25,25 @@
                 <bean:size id="size" name="etudiantsp"/>
                 <logic:equal name="size" value="0">
                     <b>
-                        Il n'y a pas d'étudiant inscrit pour cette année là.
+                        Aucun étudiant trouvé pour cette promotion
                     </b>
                 </logic:equal>
                 <logic:greaterThan name="size" value="0">
                     <table class="table table-striped table-hover table-bordered">
                         <tr>
-                            <th>Voir Profil</th>
+                            <th>Voir son profil</th>
                             <th>Prenom</th>
                             <th>Nom
-                            <th>Adresse e-mail</th>
+                            <th>Mail</th>
                             <th>Téléphone</th>
-                            <th>Curriculum Vitae</th>
+                            <th>CV</th>
                         </tr>
                         <logic:iterate id="etudiant" name="etudiantsp">
                             <tr>
                                 <td><a href="profil.do?id=<bean:write name="etudiant" property="idetudiant"/>">Profil</a></td>
                                 <td><bean:write name="etudiant" property="prenom"/></td>
                                 <td><bean:write name="etudiant" property="nom"/></td>
-                                <td><a target="_blank" href="mailto:<bean:write name="etudiant" property="mail"/>" onclick="window.open(this.href, '', config = 'height=500, width=800')">Envoyer un e-mail</a></td>
+                                <td><a target="_blank" href="mailto:<bean:write name="etudiant" property="mail"/>" onclick="window.open(this.href, '', config = 'height=500, width=800')">Envoyer un mail</a></td>
                                 <td><bean:write name="etudiant" property="telephone"/></td>
                                 <td><a href="<bean:write name="etudiant" property="cv"/>">CV</a></td>
                             </tr>

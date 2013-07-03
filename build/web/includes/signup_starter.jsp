@@ -22,6 +22,6 @@
         <html:password styleId="mdp" property="mdp" />
     </div>
     <div class="info">
-        <span>Minimum de 6 caractères</span>
+        <span>6 caractères minimum</span>
     </div>
 </div>
