@@ -1,4 +1,3 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
@@ -6,13 +5,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Annuaire privÃ©</title>
+        <title>Annuaire privé</title>
         <%@include file="includes/header.jsp" %>
     </head>
     <body>
         <%@include file="includes/menu.jsp" %>
         <div class="annuaire">
-            <h1>Annuaire privÃ©</h1>
+            <h1>Annuaire privé</h1>
 
             <html:errors/>
 
@@ -25,7 +24,7 @@
                 <bean:size id="size" name="etudiantsp"/>
                 <logic:equal name="size" value="0">
                     <b>
-                        Aucun Ã©tudiant trouvÃ© pour cette promotion
+                        Aucun étudiant trouvé pour cette promotion
                     </b>
                 </logic:equal>
                 <logic:greaterThan name="size" value="0">
@@ -35,7 +34,7 @@
                             <th>Prenom</th>
                             <th>Nom
                             <th>Mail</th>
-                            <th>TÃ©lÃ©phone</th>
+                            <th>Téléphone</th>
                             <th>CV</th>
                         </tr>
                         <logic:iterate id="etudiant" name="etudiantsp">
@@ -69,7 +68,7 @@
         <%@include file="includes/footer.jsp" %>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>
-                                    $("#anneedeb").attr("placeholder", "AnnÃ©e d'Ã©tude")
+                                    $("#anneedeb").attr("placeholder", "Année d'étude")
         </script>
     </body>
 </html>
