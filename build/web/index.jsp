@@ -12,7 +12,7 @@
     <body>
         <%@include file="includes/menu.jsp" %> 
         <div class="connexion">
-            <h1>Alumni - Université Paris 1 Panthéon-Sorbonne</h1>
+            <h1>ALUMNI - MIAGE SORBONNE</h1>
 
             <div class="page1">
                 <div class="row-fluid">
@@ -25,10 +25,22 @@
                         </logic:messagesPresent>
                     </div>
                 </div>
-                <div class="row-fluid">
-                    <div class="span6 br">
+                <div class="row-fluid">                    
+                    <div class="span4 br">
+                        <div class="inscription">
+                            <html:link forward="inscription/etudiant">                                   
+                                <html:submit styleClass="btn btn-large btn-primary box" value="Inscription Etudiant" title="Inscription" />
+                            </html:link>
+                        </div>
+                        <div class="inscription">
+                            <html:link forward="inscription/entreprise">
+                                <html:submit styleClass="btn btn-large btn-primary box" value="Inscription Entreprise" title="Inscription" />
+                            </html:link>
+                        </div>
+                    </div>
+                    <div class="span8">
                         <html:form styleClass="box" action="/connexion">
-                            <h2>J'ai déjà un compte</h2>
+                            <h2>Se connecter</h2>
                             <div class="row-fluid">
                                 <div class="span12">
                                     <div class="control-group">
@@ -47,7 +59,7 @@
                             </div>
                             <div class="row-fluid">
                                 <div class="span6">
-                                    <html:submit styleClass="btn btn-large btn-primary" value="Connexion" />
+                                    <html:submit styleClass="box btn btn-large btn-primary" value="Connexion" />
                                 </div>
                                 <div class="span6 resteConnecte">
                                     <html:checkbox styleId="resteConnecte" property="resteConnecte" value="true"></html:checkbox>
@@ -59,43 +71,7 @@
                                     <html:link styleClass="btn-oublie" forward="forgotmdp">Mot de passe oublié ?</html:link>
                                     </div>
                                 </div>
-
                         </html:form>
-                    </div>
-                    <div class="span6">
-                        <div class="inscription">
-                            <div class="inscription-inside">
-                                <h2>Je n'ai pas de compte</h2>
-                                <p class="indic">Je suis un étudiant ou une entreprise</p>
-                                <div class="sign-btn" title="Inscription"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row-fluid page2">
-                <div class="row-fluid">
-                    <div class="span12">
-                        <h2 class="big pagination-centered">Qui suis-je ?</h2>
-                    </div>
-                </div>
-                <div class="row-fluid">
-                    <div class="span6 br">
-                        <div class="inscription2">
-                            <div class="fleche_gauche"></div>
-                            <html:link forward="inscription/etudiant"><h2>Etudiant</h2></html:link>
-                                <p class="indic">Etudiant à l'Université Paris 1 Panthéon-Sorbonne ?</p>
-                            <html:link styleClass="user-btn" title="Inscription" forward="inscription/etudiant"/>
-                        </div>
-                    </div>
-                    <div class="span6">
-                        <div class="inscription2">
-                            <div class="fleche_droite"></div>
-                            <html:link forward="inscription/entreprise"><h2>Entreprise</h2></html:link>
-                                <p class="indic">Je fais partie d'une entreprise souhaitant recruter ?</p>
-                            <html:link styleClass="entre-btn" title="Inscription" forward="inscription/entreprise"/>
-                        </div>
                     </div>
                 </div>
             </div>

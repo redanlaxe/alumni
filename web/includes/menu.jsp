@@ -2,7 +2,7 @@
     <div class="navbar">
         <div class="navbar-inner">
             <div class="navbar-inside">
-                <a class="brand" href=""><img src="img/g/miage_sorbonne_160x80.png" alt="MIAGE Sorbonne"></a>
+                <a class="brand" href=""><img src="img/g/miage_couleur.jpg" alt="MIAGE Sorbonne"></a>
                 <ul class="nav">
                     <logic:present name="etudiant">
                         <li><html:link forward="annuairepublic">Annuaire</html:link></li>

@@ -13,43 +13,14 @@
     <body>
         <%@include file="includes/menu.jsp" %> 
         <div class="inscription">
-            <h1>S'enregistrer en tant qu'Alumnus</h1>
+            <h1>INSCRIPTION ETUDIANT</h1>
             <div class="row-fluid">
                 <div class="span12 errors-container">
                     <html:errors/>
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span5">
-                    <div class="span1"></div>
-                    <div class="span10">
-                        <div class="row-fluid">
-                            <h2 class="first">Réseau des anciens</h2>
-                            <p>
-                                Retrouve tes anciens camarades de la MIAGE. Contacte les via téléphone ou par email pour vous retrouver professionnellement ou amicalement.
-                            </p>
-                        </div>
-                        <div class="row-fluid">
-                            <h2>Employé ou employeur</h2>
-                            <p>
-                                Convaincu par la formation ? 
-                                <br/>
-                                Recrute tes semblables en t'inscrivant tout de suite.
-                            </p>
-                        </div>
-                        <div class="row-fluid">
-                            <h2>Visibilité du Profil</h2>
-                            <p>
-                                Augmente la visibilité de ton profil en t'inscrivant dans notre annuaire également visible pour les entreprises.
-                            </p>
-                        </div>
-                        <div class="logo-paris-1 row-logo row-fluid pagination-centered">
-                            <img src="img/g/logo_univ_paris_1.png" alt="Université Paris 1 - Panthéon Sorbonne" />
-                        </div>
-                    </div>
-                    <div class="span1"></div>
-                </div>
-                <div class="span7">
+            <div class="row-fluid">                
+                <div class="span12">
                     <html:form styleClass="box" action="/inscription/etudiant">
                         <div class="control-group">
                             <label class="control-label" for="prenom"><bean:message key="label.prenom" /></label>
@@ -106,8 +77,12 @@
                             <div class="controls end">
                                 <html:checkbox styleId="souhaiteEmploi" property="souhaiteEmploi" value="y">
                                     <label class="checkbox"></html:checkbox><bean:message key="label.souhaiteEmploi" /></label>
-                                <html:hidden property="compte" value="etudiant"/>
-                                <html:submit value="S'enregistrer" styleClass="btn btn-large btn-primary"/>	
+                                <html:hidden property="compte" value="etudiant"/>	
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <html:submit value="S'inscrire" styleClass="box btn btn-large btn-primary"/>	
                             </div>
                         </div>
                     </div>

@@ -1,9 +1,13 @@
 /** 
     START GENERAL
 **/
+body {
+    background-color: #3598db;
+}
 h1 {
     margin: 1% 0;
-    color: #263F82;
+    color: white;
+    font-size: 24px;
 }
 h2 {
     margin: 1% 0;
@@ -40,7 +44,7 @@ input[type=password]:focus{
     border-radius:4px; padding:20px;
     background-color:#f7f7f9;
     box-shadow:0 1px 2px rgba(0,0,0,0.1);
-    text-shadow:0 1px 0 rgba(255,255,255,0.6);
+    /*text-shadow:0 1px 0 rgba(255,255,255,0.6);*/
     margin-bottom:16px
 }
 
@@ -71,6 +75,12 @@ input[type=password]:focus{
 /** 
     START MENU 
 **/
+.navbar-inner {
+    background-color: white;
+}
+.navbar .brand {
+padding: 0px 20px 0px;
+}
 .navbar-inner .nav > li > a {
     padding: 40px 30px;
     font-size: 18px;
@@ -155,12 +165,9 @@ input[type=password]:focus{
     margin-top: 12px;
 }
 .connexion .sign-btn {
-    background: #F5F5F5 url(../img/connexion/btn-user.png) no-repeat 15px 15px;
     height: 110px;
     width: 110px;
     line-height: 110px;
-    border-radius: 100px;
-    border: 1px solid #FFF;
     margin: 10px 0 0 55px;
     display: block;
     cursor: pointer;
@@ -182,7 +189,6 @@ input[type=password]:focus{
     display: block;
     cursor: pointer;
 }
-.connexion .sign-btn:hover,
 .connexion .user-btn:hover,
 .connexion .entre-btn:hover {
     background-color: #FFF;
@@ -215,10 +221,6 @@ input[type=password]:focus{
 
 .inscription h2 {
     margin: 4% 0;
-}
-
-.inscription form {
-    padding: 6% 0;
 }
 .inscription .row-btn {
     padding-left: 196px;
