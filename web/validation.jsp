@@ -11,95 +11,98 @@
     </head>
     <body>
         <%@include file="includes/menu.jsp" %>
-        <h1>Valider</h1>
+        <div class="box">
+            <h2>Validation des comptes</h2>
 
-        <html:errors/>
+            <html:errors/>
 
 
-        <logic:present name="nonvalides">
-            <bean:size id="size" name="nonvalides"/>
-            <logic:equal name="size" value="0">
-                <b>
-                    Pas d'étudiant à valider
-                </b>
-            </logic:equal>
-            <logic:greaterThan name="size" value="0">
-                <h2>Etudiant(es) à valider</h2>
-                <table class="table table-striped table-hover table-bordered">
-                    <tr>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Email</th>
-                        <th>Date de naissance</th>
-                        <th>Valider</th>
-                        <th>Refuser</th>
-                    </tr>
-                    <logic:iterate id="etudiant" name="nonvalides">
+            <logic:present name="nonvalides">
+                <bean:size id="size" name="nonvalides"/>
+                <logic:equal name="size" value="0">
+                    <b>
+                        Aucun étudiant à valider
+                    </b>
+                </logic:equal>
+                <logic:greaterThan name="size" value="0">
+                    <h3>Etudiant(s) à valider</h3>
+                    <table class="table table-hover">
                         <tr>
-                            <td><bean:write name="etudiant" property="prenom"/></td>
-                            <td><bean:write name="etudiant" property="nom"/></td>
-                            <td><bean:write name="etudiant" property="mail"/></td>
-                            <td><bean:write name="etudiant" property="datenaissance"/></td>
-                            <bean:define id="identifiant" name="etudiant" property="idetudiant"/>
-                            <bean:define id="nom" name="etudiant" property="nom"/>
-                            <bean:define id="prenom" name="etudiant" property="prenom"/>
-                            <td><html:link styleClass="btn btn-success" href="validation.do?id=${identifiant}&action=valider&type=etudiant" >V</html:link></td>
-                            <td><html:link styleClass="btn btn-danger" href="validation.do?id=${identifiant}&action=invalider&type=etudiant" onclick="return(confirm('Confirmez-vous que ${nom} ${prenom} n est pas un étudiant ?'));">X</html:link></td>
+                            <th>Prénom</th>
+                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Date de naissance</th>
+                            <th>Actions</th>
+                        </tr>
+                        <logic:iterate id="etudiant" name="nonvalides">
+                            <tr>
+                                <td><bean:write name="etudiant" property="prenom"/></td>
+                                <td><bean:write name="etudiant" property="nom"/></td>
+                                <td><bean:write name="etudiant" property="mail"/></td>
+                                <td><bean:write name="etudiant" property="datenaissance"/></td>
+                                <bean:define id="identifiant" name="etudiant" property="idetudiant"/>
+                                <bean:define id="nom" name="etudiant" property="nom"/>
+                                <bean:define id="prenom" name="etudiant" property="prenom"/>
+                                <td>
+                                    <html:link styleClass="btn btn-success" href="validation.do?id=${identifiant}&action=valider&type=etudiant" >Valider</html:link>
+                                    <html:link styleClass="btn btn-danger" href="validation.do?id=${identifiant}&action=invalider&type=etudiant" onclick="return(confirm('Confirmez-vous que ${nom} ${prenom} n est pas un étudiant ?'));">Refuser</html:link>
+                                </td>
                             </tr>
-                    </logic:iterate>
-                </table>
-            </logic:greaterThan>
-        </logic:present>
+                        </logic:iterate>
+                    </table>
+                </logic:greaterThan>
+            </logic:present>
 
 
-        <logic:present name="cnonvalides">
-            <bean:size id="size" name="cnonvalides"/>
-            <logic:equal name="size" value="0">
-                <b>
-                    Pas de contact d'entreprise à valider
-                </b>
-            </logic:equal>
-            <logic:greaterThan name="size" value="0">
-                <h2>Contact(s) d'entreprise à valider</h2>
-                <table class="table table-striped table-hover table-bordered">
-                    <tr>
-                        <th>Nom de l'entreprise</th>
-                        <th>Poste</th>
-                        <th>Personne à contacter</th>
-                        <th>Email</th>
-                        <th>Téléphone</th>
-                        <th>Valider</th>
-                        <th>Refuser</th>
-                    </tr>
-                    <logic:iterate id="contact" name="cnonvalides">
-                        <bean:define id="idEnt" name="contact" property="identreprise" type="java.lang.Integer"/>
+            <logic:present name="cnonvalides">
+                <bean:size id="size" name="cnonvalides"/>
+                <logic:equal name="size" value="0">
+                    <b>
+                        Aucun contact entreprise à valider
+                    </b>
+                </logic:equal>
+                <logic:greaterThan name="size" value="0">
+                    <h3>Contact(s) entreprise à valider</h3>
+                    <table class="table table-striped table-hover table-bordered">
                         <tr>
-                            <td>
-                                <logic:present name="entreprises">
-                                    <bean:size id="sizeEntre" name="entreprises"/>
-                                    <logic:greaterThan name="sizeEntre" value="0">
-                                        <logic:iterate id="entreprise" name="entreprises">
-                                            <logic:equal name="entreprise" property="identreprise" value="${idEnt}">
-                                                <bean:write name="entreprise" property="nomentreprise"/>
-                                            </logic:equal>
-                                        </logic:iterate>
-                                    </logic:greaterThan>
-                                </logic:present>
-                            </td>
-                            <td><bean:write name="contact" property="poste"/></td>
-                            <td><bean:write name="contact" property="prenom"/> <bean:write name="contact" property="nom"/></td>
-                            <td><bean:write name="contact" property="mail"/></td>
-                            <td><bean:write name="contact" property="telephone"/></td>
-                            <bean:define id="identifiant" name="contact" property="idcontact"/>
-                            <bean:define id="nom" name="contact" property="nom"/>
-                            <bean:define id="prenom" name="contact" property="prenom"/>
-                            <td><html:link styleClass="btn btn-success" href="validation.do?id=${identifiant}&action=valider&type=contact" >V</html:link></td>
-                            <td><html:link styleClass="btn btn-danger" href="validation.do?id=${identifiant}&action=invalider&type=contact" onclick="return(confirm('Confirmez-vous que ${nom} ${prenom} n est pas un contact d entreprise ?'));">X</html:link></td>
+                            <th>Nom de l'entreprise</th>
+                            <th>Poste</th>
+                            <th>Personne à contacter</th>
+                            <th>Email</th>
+                            <th>Téléphone</th>
+                            <th>Valider</th>
+                            <th>Refuser</th>
+                        </tr>
+                        <logic:iterate id="contact" name="cnonvalides">
+                            <bean:define id="idEnt" name="contact" property="identreprise" type="java.lang.Integer"/>
+                            <tr>
+                                <td>
+                                    <logic:present name="entreprises">
+                                        <bean:size id="sizeEntre" name="entreprises"/>
+                                        <logic:greaterThan name="sizeEntre" value="0">
+                                            <logic:iterate id="entreprise" name="entreprises">
+                                                <logic:equal name="entreprise" property="identreprise" value="${idEnt}">
+                                                    <bean:write name="entreprise" property="nomentreprise"/>
+                                                </logic:equal>
+                                            </logic:iterate>
+                                        </logic:greaterThan>
+                                    </logic:present>
+                                </td>
+                                <td><bean:write name="contact" property="poste"/></td>
+                                <td><bean:write name="contact" property="prenom"/> <bean:write name="contact" property="nom"/></td>
+                                <td><bean:write name="contact" property="mail"/></td>
+                                <td><bean:write name="contact" property="telephone"/></td>
+                                <bean:define id="identifiant" name="contact" property="idcontact"/>
+                                <bean:define id="nom" name="contact" property="nom"/>
+                                <bean:define id="prenom" name="contact" property="prenom"/>
+                                <td><html:link styleClass="btn btn-success" href="validation.do?id=${identifiant}&action=valider&type=contact" >V</html:link></td>
+                                <td><html:link styleClass="btn btn-danger" href="validation.do?id=${identifiant}&action=invalider&type=contact" onclick="return(confirm('Confirmez-vous que ${nom} ${prenom} n est pas un contact d entreprise ?'));">X</html:link></td>
                             </tr>
-                    </logic:iterate>
-                </table>
-            </logic:greaterThan>
-        </logic:present>
+                        </logic:iterate>
+                    </table>
+                </logic:greaterThan>
+            </logic:present>
+        </div>
 
         <%@include file="includes/footer.jsp" %>
     </body>
