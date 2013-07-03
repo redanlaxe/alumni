@@ -88,32 +88,9 @@ public class Settings extends SuperAction {
                 Object[] paramSearchExp = {idExp};
                 com.alumni.mapping.Experience exp = (com.alumni.mapping.Experience) f.lancerMethode(paramSearchExp, "searchExperience");
                 if (exp != null) {
-                    // Cas de la modification
-                    if (action.equals("u")) {
-                        ArrayList<Salaire> salaires = new ArrayList<Salaire>();
-                        ArrayList<Competence> competences = new ArrayList<Competence>();
-                        Set<Entreprise> entreprises = new HashSet<Entreprise>();
-
-                        Object[] paramExp = {exp.getIdexperience()};
-
-                        salaires.addAll((ArrayList<Salaire>) f.lancerMethode(paramExp, "getSalaireExperience"));
-
-                        competences.addAll((ArrayList<Competence>) f.lancerMethode(paramExp, "getCompetenceExperience"));
-
-                        Object[] paramEnt = {exp.getIdentreprise()};
-                        entreprises.add((Entreprise) f.lancerMethode(paramEnt, "getEntrepriseExperience"));
-
-                        request.setAttribute("experiences", exp);
-                        request.setAttribute("salaires", salaires);
-                        request.setAttribute("competences", competences);
-                        request.setAttribute("entreprises", entreprises);
-                        return mapping.findForward(UPDATE_EXP);
-                    } // Cas de la suppression
-                    else {
-                        if (action.equals("d")) {
-                            Object[] paramDelExp = {exp};
-                            f.lancerMethode(paramDelExp, "deleteExperience");
-                        }
+                    if (action.equals("d")) {
+                        Object[] paramDelExp = {exp};
+                        f.lancerMethode(paramDelExp, "deleteExperience");
                     }
                 }
             }

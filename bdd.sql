@@ -97,86 +97,92 @@ insert into alumni.administrateur(nom, prenom, mail, mdp) values
 ('Admin', 'Admin', 'admin@admin.com','51abb9636078defbf888d8457a7c76f85c8f114c');
 
 insert into alumni.etudiant(nom, prenom, mail, mdp, adresse, telephone, dateNaissance, photoProfil, CV, souhaiteEmploi, validation) values
-('PHUNG', 'Vincent', 'vincent@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 1', '0123456789', '1991-01-01', 'lien_photo', 'lien_cv','y','y'),
-('TSIAOUSSIS', 'Dimitri', 'dimitri@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 2', '0132456789', '1992-02-11', 'lien_photo', 'lien_cv','y','y'),
-('BIRAUD', 'Gregory', 'gregory@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 3', '0124356789', '1993-03-14', 'lien_photo', 'lien_cv','y','y'),
-('CHAN', 'Christian', 'christian@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 4', '0123543789', '1994-04-24', 'lien_photo', 'lien_cv','y','y'),
-('Dupont1', 'Durant1', 'durant@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 5', '0111111111', '1995-05-31', 'lien_photo', 'lien_cv','y','y'),
-('Dupont2', 'Durant2', '123@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 5', '0122222222', '1995-05-31', 'lien_photo', 'lien_cv','y','n'),
-('Dupont3', 'Durant3', '456@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 5', '0133333333', '1995-05-31', 'lien_photo', 'lien_cv','y','n'),
-('Dupont4', 'Durant4', '789@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 5', '0144444444', '1995-05-31', 'lien_photo', 'lien_cv','y','n'),
-('Dupont1', 'Durant5', 'durant5@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 5', '0111111111', '1995-05-02', 'lien_photo', 'lien_cv','y','y'),
-('Dupont1', 'Durant6', 'durant6@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 6', '0111111111', '1995-05-31', 'lien_photo', 'lien_cv','y','y'),
-('Dupont1', 'Durant7', 'durant7@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 7', '0111111111', '1995-05-01', 'lien_photo', 'lien_cv','y','y'),
-('Dupont1', 'Durant8', 'durant8@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 8', '0111111111', '1995-01-31', 'lien_photo', 'lien_cv','y','y'),
-('Dupont1', 'Durant9', 'durant9@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 9', '0111111111', '1985-10-14', 'lien_photo', 'lien_cv','y','y'),
-('Dupont1', 'Durant10', 'durant10@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 10', '0111111111', '1993-11-30', 'lien_photo', 'lien_cv','y','y'),
-('Dupont1', 'Durant11', 'durant11@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 11', '0111111111', '1991-06-21', 'lien_photo', 'lien_cv','y','y'),
-('Dupont1', 'Durant12', 'durant12@gmail.com','51abb9636078defbf888d8457a7c76f85c8f114c', 'Adresse 12', '0111111111', '1992-02-11', 'lien_photo', 'lien_cv','y','y');
+('DUPONT', 'Francois', 'francois@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '1 rue générale de gaulle 75001 PARIS', '0689236723', '1990-05-17', 'lien_photo', 'lien_cv','y','y'),
+('MARTIN', 'nicolas', 'nicolas@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '23 boulevard de la gare 75013 PARIS', '0712348934', '1985-12-15', 'lien_photo', 'lien_cv','y','y'),
+('NICOLAS', 'Elodie', 'elodie@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '102 allée du passoir 75009 PARIS', '0134783423', '1989-03-01', 'lien_photo', 'lien_cv','y','y'),
+('YVES', 'Lucie', 'lucie@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '3 rue de paris 75003 PARIS', '0812438945', '1990-04-08', 'lien_photo', 'lien_cv','y','y'),
+('HERVE', 'Thierry', 'thierry@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '123 boulevard de la gare 75001 PARIS', '0123456789', '1990-10-02', 'lien_photo', 'lien_cv','y','y'),
+('LESAGE', 'Franck', 'franck@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '23 rue de paris 75004 PARIS', '0412983469', '1992-08-22', 'lien_photo', 'lien_cv','y','n'),
+('DERIEN', 'Luc', 'luc@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '88 allée cassiopée 75020 PARIS', '0134894756', '1987-09-18', 'lien_photo', 'lien_cv','y','n'),
+('PASCAL', 'Elisa', 'elisa@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '1 place étoile 75006 PARIS', '0745362984', '1986-11-28', 'lien_photo', 'lien_cv','y','n'),
+('HERVE', 'Sophie', 'sophie@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '2 rue concorde 75003 PARIS', '0683926633', '1988-12-30', 'lien_photo', 'lien_cv','y','y'),
+('HERVE', 'Sophia', 'sophia@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '23 boulevard de la gare 75004 PARIS', '0698340399', '1990-12-23', 'lien_photo', 'lien_cv','y','y'),
+('HERVE', 'Noemie', 'noemie@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '12 rue de metz 75001 PARIS', '0154738279', '1985-10-18', 'lien_photo', 'lien_cv','y','y'),
+('HERVE', 'François', 'francois@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '65 boulevard ', '074829389', '1987-05-16', 'lien_photo', 'lien_cv','y','y'),
+('HERVE', 'Alex', 'alex@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '132 rue du génie 75003 PARIS ', '0634827384', '1989-03-06', 'lien_photo', 'lien_cv','y','y'),
+('HERVE', 'Dayvid', 'dayvid@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '48 boulevard leclerc 75002 PARIS', '0749284765', '1992-04-09', 'lien_photo', 'lien_cv','y','y'),
+('HERVE', 'Cedric', 'cedric@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '34 rue tolbiac 75013 PARIS', '0187349834', '1990-03-24', 'lien_photo', 'lien_cv','y','y'),
+('HERVE', 'Dimitri', 'dimitri@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '2 allée orion 75007 PARIS', '0734637277', '1990-02-11', 'lien_photo', 'lien_cv','y','y');
 
 
 insert into alumni.entreprise(nomEntreprise, adresse) values
-('BNP Paribas' ,'Adresse BNP Paribas'),
-('Orange' ,'91 rue de tolbiac 75013 Paris'),
-('Technip' ,'89 avenue de la grande armée 75116'),
-('Renault' ,'Adresse 4'),
-('Accenture' ,'Rue de la mort');
+('Air France' ,'orly'),
+('Monnaie de Paris' ,'Paris'),
+('LCL' ,'la défense'),
+('Orange' ,'gentilly'),
+('Areva' ,'la defense'),
+('BNP','paris'), 
+('Renault','sevres'),
+('ICDC', 'antony'),
+('Matmut','Cergy');
 
 insert into alumni.contact(nom, prenom, mail, mdp, telephone, poste, idEntreprise, validation)  values
-('Nom_Paribas_1', 'Prenom_Paribas_1', 'bnp@paribas.fr', '51abb9636078defbf888d8457a7c76f85c8f114c', '0123456789', 'CEO', 1, 'y'),
-('Nom_Paribas_2', 'Prenom_Paribas_2', 'bnp2@paribas.fr', '51abb9636078defbf888d8457a7c76f85c8f114c', '0123456789', 'CTO', 1, 'y'),
-('Nom_Paribas_3', 'Prenom_Paribas_3', 'bnp3@paribas.fr', '51abb9636078defbf888d8457a7c76f85c8f114c', '0123456789', 'Femme de menage', 1, 'n'),
-('Nom_Technip_1', 'Prenom_Technip_1', 'technip1@technip.fr', '51abb9636078defbf888d8457a7c76f85c8f114c', '0123456789', 'DRH', 3, 'y'),
-('Nom_Technip_2', 'Prenom_Technip_2', 'technip2@technip.fr', '51abb9636078defbf888d8457a7c76f85c8f114c', '0123456789', 'DRH', 3, 'y'),
-('Nom_Technip_3', 'Prenom_Technip_3', 'technip3@technip.fr', '51abb9636078defbf888d8457a7c76f85c8f114c', '0123456789', 'DRH', 3, 'y');
+('JACQUES', 'HENRY', 'henry@bnp.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0723994533', 'Chef comptable', 6, 'y'),
+('MARTIN', 'CLAUDE', 'claude@bnp.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0611223344', 'chef de projet', 6, 'y'),
+('KHAUV', 'Thierry', 'thierry@tidda.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0621728179', 'CEO', 3, 'y'),
+('HUNAULT', 'Alexandre', 'alexandre@tidda.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0634928734', 'CEO', 3, 'y'),
+('KAYAL', 'Dayvid', 'dayvid@tidda.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0694827456', 'CEO', 3, 'y');
+('NI', 'Nicolas', 'nicolas@airfrance.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0799833462', 'Developpeur PHP', 1, 'y'),
+('RO', 'Romain', 'romain@monnaiedeparis.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0645928923', 'ingénieur études', 2, 'y'),
+('LA', 'Laurent', 'laurent@renault.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0723119977', 'consultant interne', 7, 'y');
 
 INSERT INTO ALUMNI.EXPERIENCE (IDENTREPRISE, IDETUDIANT, TYPECONTRAT, DEBUT, FIN, INTITULEPOSTE) VALUES 
-(1, 2, 'cdd', '2012-11-06', '2013-01-01', 'AMOA'),
-(2, 2, 'cdi', '2013-01-02', '2013-04-08', 'Developpeur PHP'),
-(3, 1, 'cdd', '2008-01-01', '2010-12-31', 'Informaticien'),
-(3, 1, 'cdi', '2011-01-01', '2011-12-31', 'Developpeur JEE'),
-(3, 1, 'cdi', '2012-01-01', '2012-12-31', 'Chef de Projet'),
-(3, 1, 'cdi', '2013-01-01', '2013-04-10', 'CTO'),
-(3, 3, 'cdi', '2013-01-01', '2013-04-10', 'PMO'),
-(3, 4, 'cdi', '2013-01-01', '2013-04-10', 'Consultant SAP');
+(1, 1, 'cdi', '2009-03-12', '2013-03-24', 'chef de projet junior'),
+(2, 1, 'cdd', '2008-04-21', '2009-01-30', 'ingénieur études'),
+(3, 1, 'cdi', '2010-01-20', '2013-03-31', 'consultant technico-commercial'),
+(3, 2, 'cdi', '2012-10-17', '2013-12-15', 'developpeur PHP'),
+(6, 3, 'cdd', '2010-11-15', '2013-11-03', 'developpeur JAVA'),
+(6, 4, 'cdd', '2005-12-04', '2006-10-30', 'chargé référencement'),
+(4, 5, 'cdi', '2007-08-13', '2009-02-09', 'consultant ERP'),
+(5, 5, 'cdi', '2000-02-23', '2010-01-12', 'developpeur C++');
 
 INSERT INTO alumni.competence (idExperience, libelle) VALUES
+(3, 'C'),
+(3, 'C++'),
+(3, 'C#'),
 (3, 'HTML'),
 (3, 'CSS'),
-(3, 'PHP'),
-(3, 'JavaScript'),
-(3, 'jQuery'),
-(3, 'Symfony2.0'),
-(3, 'JUnit'),
-(4, 'EJB'),
-(4, 'J2EE'),
-(4, 'Struts'),
-(4, 'Hibernate'),
-(4, 'Client/Serveur'),
-(4, 'JMS'),
-(4, 'MDB'),
+(3, 'Javascript'),
+(3, 'J2EE'),
 (4, 'HTML'),
-(4, 'JSP'),
-(4, 'CSS'),
-(4, 'Agile'),
-(4, 'JUnit'),
-(5, 'HTML'),
-(5, 'Management'),
-(5, 'Architecture Client/Serveur'),
-(5, 'Agile'),
-(5, 'JUnit');
+(4, 'ERP'),
+(4, 'SAP'),
+(4, 'BO'),
+(4, 'SQL'),
+(2, 'AGILE'),
+(2, 'SCRUM'),
+(2, 'CYCLE CASCADE'),
+(6, 'PHP'),
+(6, 'WORDPRESS'),
+(6, 'SYMFONY'),
+(1, 'C++'),
+(1, '.NET'),
+(1, 'C'),
+(5, 'JAVA'),
+(5, '.NET'),
+(5, 'J2EE');
 
 INSERT INTO alumni.salaire (idExperience, valeur, annee) VALUES
-(1, 34000, 2012),
-(2, 34000, 2013),
-(3, 24000, 2008),
-(3, 28000, 2009),
-(3, 32000, 2010),
-(4, 40000, 2011),
-(5, 60000, 2012),
-(6, 100000, 2013),
-(7, 50000, 2013),
-(8, 39999, 2013);
+(1, 37000, 2010),
+(1, 38000, 2012),
+(2, 40000, 2008),
+(2, 45000, 2009),
+(4, 33000, 2011),
+(4, 34000, 2012),
+(5, 41000, 2012),
+(5, 42000, 2013),
+(6, 30000, 2010),
+(6, 32000, 2013);
 
 
 INSERT INTO alumni.anneedeformation(anneeUniversitaireDebut, anneeUniversitaireFin, ecole, libelle) VALUES

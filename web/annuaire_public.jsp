@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Annuaire Public</title>
+        <title>Annuaire public</title>
         <%@include file="includes/header.jsp" %>
     </head>
     <body>
@@ -25,7 +25,7 @@
                 <bean:size id="size" name="etudiants"/>
                 <logic:equal name="size" value="0">
                     <b>
-                        Il n'y a pas d'étudiant inscrit pour cette année là.
+                        Pas d'étudiant pour cette promotion
                     </b>
                 </logic:equal>
                 <logic:greaterThan name="size" value="0">
@@ -34,9 +34,9 @@
                             <th>Voir Profil</th>
                             <th>Prenom</th>
                             <th>Nom
-                            <th>Adresse e-mail</th>
+                            <th>Email</th>
                             <th>Téléphone</th>
-                            <th>Curriculum Vitae</th>
+                            <th>CV</th>
 							<th>Recherche Emploi</th>
                         </tr>
                         <logic:iterate id="etudiant" name="etudiants">
@@ -44,7 +44,7 @@
                                 <td><a href="profil.do?id=<bean:write name="etudiant" property="idetudiant"/>">Profil</a></td>
                                 <td><bean:write name="etudiant" property="prenom"/></td>
                                 <td><bean:write name="etudiant" property="nom"/></td>
-                                <td><a target="_blank" href="mailto:<bean:write name="etudiant" property="mail"/>">Envoyer un e-mail</a></td>
+                                <td><a target="_blank" href="mailto:<bean:write name="etudiant" property="mail"/>" onclick="window.open(this.href, '', config = 'height=500, width=800')">Envoyer un mail</a></td>
                                 <td><bean:write name="etudiant" property="telephone"/></td>
                                 <td><a href="<bean:write name="etudiant" property="cv"/>">CV</a></td>
                                 <td><logic:present name="etudiant" property="souhaiteemploi">
