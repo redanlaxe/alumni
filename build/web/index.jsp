@@ -26,7 +26,8 @@
                     </div>
                 </div>
                 <div class="row-fluid">                    
-                    <div class="span4 br">
+                    <div class="span4 box">
+                        <h2>S'inscrire</h2>
                         <div class="inscription">
                             <html:link forward="inscription/etudiant">                                   
                                 <html:submit styleClass="btn btn-large btn-primary box" value="Inscription Etudiant" title="Inscription" />
@@ -38,7 +39,7 @@
                             </html:link>
                         </div>
                     </div>
-                    <div class="span8">
+                    <div class="span7">
                         <html:form styleClass="box" action="/connexion">
                             <h2>Se connecter</h2>
                             <div class="row-fluid">
@@ -58,31 +59,28 @@
                                 </div>
                             </div>
                             <div class="row-fluid">
--                                <div class="span6">
--                                    <html:submit styleClass="box btn btn-large btn-primary" value="Connexion" />
--                                </div>
--                                
--                            </div>
+                                    <html:submit styleClass="box btn btn-large btn-primary" value="Connexion" />
+                            </div>
                         </html:form>
                     </div>
                 </div>
             </div>
 
-            </div>
         </div>
-        <%@include file="includes/footer.jsp" %> 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.sign-btn').unbind('click');
-                $('.sign-btn').click(function() {
-                    $('.page1').fadeOut(300);
-                    $('.page2').show(500).animate({
-                        opacity: 1
-                    });
-                    return false;
+    </div>
+    <%@include file="includes/footer.jsp" %> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.sign-btn').unbind('click');
+            $('.sign-btn').click(function() {
+                $('.page1').fadeOut(300);
+                $('.page2').show(500).animate({
+                    opacity: 1
                 });
+                return false;
             });
-        </script>
-    </body>
+        });
+    </script>
+</body>
 </html>
