@@ -21,7 +21,7 @@ import org.apache.struts.action.DynaActionForm;
 
 /**
  *
- * @author Gregory
+ * @author Desvides
  */
 public class Experience extends SuperAction {
 

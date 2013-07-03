@@ -25,7 +25,7 @@ import org.apache.struts.upload.FormFile;
 
 /**
  *
- * @author vincent
+ * @author Desvides
  */
 public class Alumni {
 

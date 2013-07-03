@@ -22,7 +22,7 @@ import org.apache.struts.action.ActionMapping;
 
 /**
  *
- * @author Dimitri
+ * @author Desvides
  */
 public class Profil extends SuperAction {
     /* forward name="success" path="" */

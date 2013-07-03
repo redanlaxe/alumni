@@ -21,7 +21,7 @@ import org.apache.struts.upload.FormFile;
 
 /**
  *
- * @author Dimitri
+ * @author Desvides
  */
 public class ModifProfil extends SuperAction {
 

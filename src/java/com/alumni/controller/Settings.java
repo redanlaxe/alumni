@@ -21,7 +21,7 @@ import org.apache.struts.action.ActionMapping;
 
 /**
  *
- * @author Gregory
+ * @author Desvides
  */
 public class Settings extends SuperAction {
 
