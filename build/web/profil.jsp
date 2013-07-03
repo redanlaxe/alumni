@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Profil
-    Created on : 4 avr. 2013, 21:10:20
-    Author     : Gregory
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>

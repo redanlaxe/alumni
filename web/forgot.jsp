@@ -1,9 +1,3 @@
-<%-- 
-    Document   : forgot
-    Created on : 4 avr. 2013, 21:13:36
-    Author     : Gregory
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

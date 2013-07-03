@@ -1,9 +1,3 @@
-<%-- 
-    Document   : contact
-    Created on : 9 avr. 2013, 15:16:30
-    Author     : Gregory
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
