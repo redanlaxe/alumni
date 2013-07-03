@@ -58,11 +58,10 @@
                                 </div>
                             </div>
                             <div class="row-fluid">
--                                <div class="span6">
--                                    <html:submit styleClass="box btn btn-large btn-primary" value="Connexion" />
--                                </div>
--                                
--                            </div>
+                                <div class="span6">
+                                    <html:submit styleClass="box btn btn-large btn-primary" value="Connexion" />
+                                </div>
+                            </div>
                         </html:form>
                     </div>
                 </div>

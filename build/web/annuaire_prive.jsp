@@ -68,7 +68,7 @@
         <%@include file="includes/footer.jsp" %>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>
-                                    $("#anneedeb").attr("placeholder", "Année d'étude")
+             $("#anneedeb").attr("placeholder", "Année d'étude")
         </script>
     </body>
 </html>
