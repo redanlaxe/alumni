@@ -13,50 +13,14 @@
     <body>
         <%@include file="includes/menu.jsp" %> 
         <div class="inscription">
-<<<<<<< HEAD
             <h1>S'inscrire</h1>
-=======
-            <h1>INSCRIPTION ETUDIANT</h1>
->>>>>>> 1c632adb84a5976ccda30ad6c3820b46bd888946
             <div class="row-fluid">
                 <div class="span12 errors-container">
                     <html:errors/>
                 </div>
             </div>
-<<<<<<< HEAD
-            <div class="row-fluid">
-                <div class="span5">
-                    <div class="span1"></div>
-                    <div class="span10">
-                        <div class="row-fluid">
-                            <h2 class="first">Les anciens</h2>
-                            <p>
-                                Contactez les anciens étudiants de la MIAGE. 
-                            </p>
-                        </div>
-                        <div class="row-fluid">
-                            <h2>Recrutement</h2>
-                            <p>
-                                Recrutez des étudiants MIAGE en s'inscrivant dès maintenant
-                            </p>
-                        </div>
-                        <div class="row-fluid">
-                            <h2>Profil</h2>
-                            <p>
-                                Inscrit toi sur l'annuaire afin d'être visibles par les étudiants, les anciens et les entreprises
-                            </p>
-                        </div>
-                        <div class="logo-paris-1 row-logo row-fluid pagination-centered">
-                            <img src="img/g/logo_univ_paris_1.png" alt="Université Paris 1 - Panthéon Sorbonne" />
-                        </div>
-                    </div>
-                    <div class="span1"></div>
-                </div>
-                <div class="span7">
-=======
             <div class="row-fluid">                
                 <div class="span12">
->>>>>>> 1c632adb84a5976ccda30ad6c3820b46bd888946
                     <html:form styleClass="box" action="/inscription/etudiant">
                         <div class="control-group">
                             <label class="control-label" for="prenom"><bean:message key="label.prenom" /></label>

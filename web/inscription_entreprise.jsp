@@ -13,50 +13,14 @@
     <body>
         <%@include file="includes/menu.jsp" %> 
         <div class="inscription">
-<<<<<<< HEAD
             <h1>Inscrivez-vous pour consulter l'annuaire de la MIAGE Sorbonne</h1>
-=======
-            <h1>INSCRIPTION ENTREPRISE</h1>
->>>>>>> 1c632adb84a5976ccda30ad6c3820b46bd888946
             <div class="row-fluid">
                 <div class="span12 errors-container">
                     <html:errors/>
                 </div>
             </div>
-<<<<<<< HEAD
-            <div class="row-fluid">
-                <div class="span5">
-                    <div class="span1"></div>
-                    <div class="span10">
-                        <div class="row-fluid">
-                            <h2>Consultation de l'annuaire</h2>
-                            <p>
-                                Inscrivez-vous afin de pouvoir consulter les profils des miagistes
-                            </p>
-                        </div>
-                        <div class="row-fluid">
-                            <h2>MIAGE Sorbonne</h2>
-                            <p>
-                                La Miage Sorbonne est une formation d'excellence en systèmes d'information formant des cadres dans le domaine de l'Informatique des Organisations.
-                            </p>
-                        </div>
-                        <div class="row-fluid">
-                            <h2>Stage/Apprentissage/Emploi</h2>
-                            <p>
-                                Inscrivez-vous afin de pouvoir consulter les profils des miagistes
-                            </p>
-                        </div>
-                        <div class="logo-paris-1 row-logo row-fluid pagination-centered">
-                            <img src="img/g/logo_univ_paris_1.png" alt="Université Paris 1 - Panthéon Sorbonne" />
-                        </div>
-                    </div>
-                    <div class="span1"></div>
-                </div>
-                <div class="span7">
-=======
             <div class="row-fluid">                
                 <div class="span12">
->>>>>>> 1c632adb84a5976ccda30ad6c3820b46bd888946
                     <html:form styleClass="box" action="/inscription/entreprise">
                         <%@include file="includes/signup_starter.jsp" %> 
                         <div class="control-group">

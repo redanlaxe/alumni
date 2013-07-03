@@ -12,7 +12,7 @@
     <body>
         <%@include file="includes/menu.jsp" %> 
         <div class="profil">
-            <h1>Modifier profil</h1>
+            <h2>Modifier profil</h2>
             <html:errors/>
             <logic:present name="etudiant">
                 <p>Bienvenue <bean:write name="etudiant" property="prenom"/> <bean:write name="etudiant" property="nom"/></p>
@@ -20,7 +20,40 @@
             </logic:present>
             <html:link forward="modifProfil">Modifier</html:link>
 
-            <h2> Expériences </h2>
+            <h3>Formations</h3>
+            <logic:present name="anneesformation">
+
+                <bean:size id="size" name="anneesformation"/>
+                <logic:equal name="size" value="0">
+                    <b>Aucune formation</b>
+                </logic:equal>
+                <logic:greaterThan name="size" value="0">
+                    <table class="table table-striped table-hover table-bordered">
+                        <tr>
+                            <th>Etablissement </th>
+                            <th>Formation</th>
+                            <th>Année</th>
+                            <th>Modifier</th>
+                            <th>Supprimer</th>
+                        </tr>
+
+                        <logic:iterate id="anneeformation" name="anneesformation">
+                            <bean:define id="idFor" name="anneeformation" property="idformation" type="java.lang.Integer"/>
+                            <tr>
+                                <td> <bean:write name="anneeformation" property="anneeuniversitairedebut"/> -
+                                    <bean:write name="anneeformation" property="anneeuniversitairefin"/>  </td>
+                                <td><bean:write name="anneeformation" property="ecole"/></td>
+                                <td><bean:write name="anneeformation" property="libelle"/></td>
+                                <td><html:link href="./settings.do?idEtu=${idEtu}&idFor=${idFor}&action=u">Modifier</html:link></td>
+                                <td><html:link href="./settings.do?idEtu=${idEtu}&idFor=${idFor}&action=d" onclick="return(confirm('Confirmez-vous la suppression de la formation ?'))">Supprimer</html:link></td>
+                            </logic:iterate>
+
+                        </tr>
+                    </table>
+                </logic:greaterThan>
+            </logic:present>                    
+            <html:link forward="formation">Ajouter une formation</html:link>
+            <h3>Expériences</h3>
             <logic:present name="experiences">
                 <bean:size id="size" name="experiences"/>
                 <logic:equal name="size" value="0">
@@ -40,8 +73,8 @@
                         </tr>
                         <logic:iterate id="experience" name="experiences">
                             <tr>      
-                                <td><bean:write name="experience" property="intituleposte"/></td> 
-                                <td><bean:write name="experience" property="typecontrat"/></td>
+                                <td><span class="label"><bean:write name="experience" property="intituleposte"/></span></td> 
+                                <td><span class="label label-warning"><bean:write name="experience" property="typecontrat"/></span></td>
                                 <bean:define id="idExp" name="experience" property="idexperience" type="java.lang.Integer"/>
                                 <bean:define id="idEnt" name="experience" property="identreprise" type="java.lang.Integer"/>
                                 <logic:present name="salaires">
@@ -75,7 +108,7 @@
                                         <logic:greaterThan name="sizeComp" value="0">
                                             <logic:iterate id="competence" name="competences">
                                                 <logic:equal name="competence" property="idexperience" value="${idExp}">
-                                                    <span class="competence"><bean:write name="competence" property="libelle"/></span>
+                                                    <span class="label label-info"><bean:write name="competence" property="libelle"/></span>
                                                 </logic:equal>
                                             </logic:iterate>
                                         </logic:greaterThan>
@@ -84,13 +117,13 @@
                                 <logic:present name="entreprises">
                                     <bean:size id="sizeEnt" name="entreprises"/>
                                     <logic:greaterThan name="sizeEnt" value="0">
-                                        <td>
+                                        <td><span class="label label-success">
                                             <logic:iterate id="entreprise" name="entreprises">
                                                 <logic:equal name="entreprise" property="identreprise" value="${idEnt}">
                                                     <bean:write name="entreprise" property="nomentreprise"/>
                                                 </logic:equal>
                                             </logic:iterate>
-                                        </td>
+                                            </span></td>
                                     </logic:greaterThan>
                                 </logic:present>
                                 <td><html:link href="./settings.do?idEtu=${idEtu}&idExp=${idExp}&action=u">Modifier</html:link></td>
@@ -101,39 +134,6 @@
                 </logic:greaterThan>
             </logic:present>
             <html:link forward="experience">Ajouter une expérience</html:link>
-            <h2>Formations</h2>
-            <logic:present name="anneesformation">
-
-                <bean:size id="size" name="anneesformation"/>
-                <logic:equal name="size" value="0">
-                    <b>Aucune formation</b>
-                </logic:equal>
-                <logic:greaterThan name="size" value="0">
-                    <table class="table table-striped table-hover table-bordered">
-                        <tr>
-                            <th>Etablissement </th>
-                            <th>Formation</th>
-                            <th>Année</th>
-                            <th>Modifier</th>
-                            <th>Supprimer</th>
-                        </tr>
-
-                        <logic:iterate id="anneeformation" name="anneesformation">
-                            <bean:define id="idFor" name="anneeformation" property="idformation" type="java.lang.Integer"/>
-                            <tr>
-                                <td> <bean:write name="anneeformation" property="anneeuniversitairedebut"/> -
-                                    <bean:write name="anneeformation" property="anneeuniversitairefin"/>  </td>
-                                <td><bean:write name="anneeformation" property="ecole"/></td>
-                                <td><bean:write name="anneeformation" property="libelle"/></td>
-                                <td><html:link href="./settings.do?idEtu=${idEtu}&idFor=${idFor}&action=u">Modifier</html:link></td>
-                                <td><html:link href="./settings.do?idEtu=${idEtu}&idFor=${idFor}&action=d" onclick="return(confirm('Confirmez-vous la suppression de la formation ?'))">Supprimer</html:link></td>
-                            </logic:iterate>
-
-                        </tr>
-                    </table>
-                </logic:greaterThan>
-            </logic:present>
-            <html:link forward="formation">Ajouter une formation</html:link>
         </div>
         <%@include file="includes/footer.jsp" %>
     </body>
