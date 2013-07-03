@@ -13,7 +13,7 @@ public class Statistique extends SuperAction {
 
     public Statistique() throws InstantiationException, ClassNotFoundException, IllegalAccessException {
         super();
-        f.instantiate("com.alumni.model.dao.AlumniServiceDAO");
+        f.instantiate("com.alumni.model.dao.AlumniService");
     }
 
     @Override
