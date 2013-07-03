@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 avr. 2013 21:29:21 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.alumni.mapping.Competence" table="COMPETENCE" schema="ALUMNI">
+        <id name="idcompetence" type="int">
+            <column name="IDCOMPETENCE" />
+            <generator class="identity" />
+        </id>
+        <property name="idexperience" type="java.lang.Integer">
+            <column name="IDEXPERIENCE" />
+        </property>
+        <property name="libelle" type="string">
+            <column name="LIBELLE" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

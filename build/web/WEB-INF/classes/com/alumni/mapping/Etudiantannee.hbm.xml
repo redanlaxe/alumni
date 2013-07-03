@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 avr. 2013 21:29:21 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.alumni.mapping.Etudiantannee" table="ETUDIANTANNEE" schema="ALUMNI">
+        <composite-id name="id" class="com.alumni.mapping.EtudiantanneeId">
+            <key-property name="idformation" type="int">
+                <column name="IDFORMATION" />
+            </key-property>
+            <key-property name="idetudiant" type="int">
+                <column name="IDETUDIANT" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

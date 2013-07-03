@@ -1,0 +1,424 @@
+/** 
+    START GENERAL
+**/
+h1 {
+    margin: 1% 0;
+    color: #263F82;
+}
+h2 {
+    margin: 1% 0;
+}
+h2.first {
+    margin-top: 0!important;
+}
+h2.big {
+    font-size: 25px;
+}
+.br {
+    border-right: 1px solid #ddd;
+}
+input[type=text],
+input[type=password]{
+    background-color: #FFF!important;
+    color: #888;
+}
+input[type=text]:focus,
+input[type=password]:focus{
+    color: #555;
+}
+.indic {
+    font-style: italic;
+    color: #AAA;
+}
+.box, 
+.box10{
+    border:1px solid #D2D2D2;
+    border-bottom-color:#9D9D9D;
+    border-bottom-color:rgba(0,0,0,0.25);
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px; padding:20px;
+    background-color:#f7f7f9;
+    box-shadow:0 1px 2px rgba(0,0,0,0.1);
+    text-shadow:0 1px 0 rgba(255,255,255,0.6);
+    margin-bottom:16px
+}
+
+.box:hover, 
+.box10:hover{
+    -moz-box-shadow: 0 0 2px 2px #E0E8FF;
+    -webkit-box-shadow: 0 0 2px 2px #E0E8FF;
+    box-shadow: 0 0 2px 2px #E0E8FF;
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -ms-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    transition:all 0.5s ease-in-out
+}
+.errors-container {
+    min-height: 0px!important;
+}
+.alert-error ul {
+    margin: 0 0 0 15px;
+}
+/** 
+    END GENERAL		
+**/
+
+
+
+
+/** 
+    START MENU 
+**/
+.navbar-inner .nav > li > a {
+    padding: 40px 30px;
+    font-size: 18px;
+    color: #263f82;
+}
+.navbar-inner .nav > li > a:hover {
+    background-color: #FFF7E7;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-inside {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+/** 
+    END MENU 
+**/
+
+
+
+
+/**
+    START CONTENT
+**/
+.statistique,
+.profil,
+.annuaire {
+    background-color: #FCFCFC;
+    padding: 2% 3% 3% 3%;
+    box-shadow: 1px 1px 5px #CCC;
+    -webkit-box-shadow: 1px 1px 5px #CCC;
+    -moz-box-shadow: 1px 1px 5px #CCC;
+}
+
+.content {
+    padding: 20px;
+}
+.content-inside {
+    max-width: 1024px;
+    margin: 0 auto;        
+}
+
+.connexion form,
+.connexion .inscription {
+    margin-left: 2px;
+}
+.connexion form,
+.connexion div.inscription{
+    width: 60%;
+    margin: 0 auto;
+}
+.connexion div.inscription2 {
+    text-align: center;
+}
+.connexion input[type=text],
+.connexion input[type=password]{
+    width: 85%;
+}
+.connexion input[type=text].user {
+    background: url(../img/connexion/user.png) no-repeat 7px;
+}
+.connexion input[type=password].lock {
+    background: url(../img/connexion/lock.png) no-repeat 7px;
+}
+.connexion input[type=text].user,
+.connexion input[type=password].lock {
+    padding-left: 28px;
+}
+.connexion .forgot {
+    margin-top: 14px;
+}
+.connexion .resteConnecte input {
+    float: left;
+    margin-right: 8px;
+    margin-top: 16px;
+}
+.connexion .resteConnecte label {
+    float: left;
+    margin-top: 12px;
+}
+.connexion .sign-btn {
+    background: #F5F5F5 url(../img/connexion/btn-user.png) no-repeat 15px 15px;
+    height: 110px;
+    width: 110px;
+    line-height: 110px;
+    border-radius: 100px;
+    border: 1px solid #FFF;
+    margin: 10px 0 0 55px;
+    display: block;
+    cursor: pointer;
+}
+.connexion .user-btn {
+    background: #F5F5F5 url(../img/connexion/btn-etudiant.png) no-repeat 15px 15px;
+}
+.connexion .entre-btn {
+    background: #F5F5F5 url(../img/connexion/btn-entreprise.png) no-repeat 15px 15px;
+}
+.connexion .user-btn,
+.connexion .entre-btn {
+    height: 110px;
+    width: 110px;
+    line-height: 110px;
+    border-radius: 100px;
+    border: 1px solid #FFF;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+.connexion .sign-btn:hover,
+.connexion .user-btn:hover,
+.connexion .entre-btn:hover {
+    background-color: #FFF;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;	
+}
+.connexion .inscription-inside h2 {
+    margin-left: 10px;
+}
+.connexion .page2 {
+    display: none;
+    opacity: 0;
+}
+.connexion .fleche_gauche {
+    background: #f1f1f1 url(../img/connexion/sprite_fleche.png) no-repeat;
+    margin: 3% 0 5% 67%;
+}
+.connexion .fleche_droite {
+    background: #f1f1f1 url(../img/connexion/sprite_fleche.png) no-repeat -70px;
+    margin: 3% 0 5% 13%;
+}
+.connexion .fleche_gauche,
+.connexion .fleche_droite {
+    width: 70px;
+    height: 70px;
+}
+
+.inscription h2 {
+    margin: 4% 0;
+}
+
+.inscription form {
+    padding: 6% 0;
+}
+.inscription .row-btn {
+    padding-left: 196px;
+}
+.inscription .row-logo {
+    margin-top: 20px;
+}
+.inscription label {
+    float: left;
+    text-align: right;
+    width: 27%;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 5%;
+}
+.inscription input[type=text],
+.inscription input[type=password] {
+    width: 50%;
+    padding: 2px 10px;
+    margin-bottom: 0;
+}
+.inscription .controls.end {
+    margin-left: 37%;
+}
+.inscription .controls.end input[type=checkbox]{
+    float: left;
+}
+.inscription .controls.end input[type=submit] {
+    margin-top: 14px;
+}
+.inscription label.checkbox {
+    width: auto;
+    height: 20px;
+    line-height: 20px!important;
+    margin-left: 0!important;
+    float: left;
+}
+.inscription div.info {
+    margin-left: 37%;
+    font-size: 13px;
+    font-style: italic;
+    color: #AAA;
+}
+.profil .column-competence {
+    max-width: 200px;
+}
+span.competence,
+.profil .competence {
+    padding: 5px 10px;
+    border: 1px solid #DDD;
+    display: inline-block;
+    margin: 0px 3px 3px 0px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #BBD4F1;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#D7E8FC));
+    border-color: #B6D1F3;
+    border-top-color: #D0E7FF;
+}
+.profil .salaire-wrap .title {
+    font-weight: bold;
+}
+.profil .salaire-wrap span {
+    line-height: 30px;
+}
+.profil .salaire-wrap .salaire-row {
+    border-top: 1px solid #DDD;
+}
+.profil .table th {
+    font-size: 16px;
+}
+
+.statistique .nav.nav-tabs {
+    margin-bottom: 0px;
+    -moz-border-radius: 0px 5px 0px 0px;
+    -webkit-border-radius:0px 5px 0px 0px;
+    border-radius: 0px 5px 0px 0px;
+}
+.statistique .tab-content {
+    border-left: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 5px 5px;
+    overflow: hidden;
+    padding: 5px 20px 20px 20px;
+}
+/**
+    END CONTENT
+**/
+
+
+
+
+#form-search {
+    border: 1px solid black;
+    padding: 30px;
+}
+.edit-del a {
+    display: block;
+}
+
+
+
+
+
+
+
+
+@media handheld, only screen and (max-width:640px), only screen and (max-device-width:640px){ /* Les propriétés CSS ici */}
+
+@media screen and (min-width:400px) and (max-width:700px){ /* Les propriétés CSS ici */}
+
+
+@media screen and (max-width:999px){
+    body {
+        padding: 0px;
+        font-size: 0.9em;
+    }
+    .navbar-inner {
+        padding: 0px;
+    }
+    .navbar .brand {
+        text-align: center;
+        margin: 1% auto;
+        width: 100%;
+    }
+    .connexion form, .connexion div.inscription {
+        width: 90%;
+        margin: 0 auto;
+        padding: 5%;
+    }
+    .fleche_gauche,
+    .fleche_droite {
+        display: none;
+    }
+    .br {
+        border: none
+    }
+    .navbar .nav > li {
+        width: 33%;
+        text-align: center;
+    }
+    .inscription h2 {
+        margin:1% 0;
+    }
+    .navbar-inner .nav > li > a {
+        padding: 10%;
+        width: 80%;
+    }
+    .inscription-inside {
+        text-align:center;
+    }
+    .sign-btn {
+        margin: 0 auto!important;
+    }
+    .logo-paris-1 {
+        display: none;
+    }
+    .inscription label {
+        float: left;
+        text-align: left;
+        width: 37%;
+        height: 36px;
+        line-height: 36px;
+        margin: 0 5%;
+    }
+    .controls input[type=text],
+    .controls input[type=password]{
+        margin: 0 5%;
+        width: 75%;
+    }
+    .inscription div.info {
+        margin-left: 5%;
+        font-size: 0.8em;
+        font-style: italic;
+        color: #AAA;
+    }
+    .inscription .controls.end {
+        margin-left: 5%;
+    }
+    .navbar .nav {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .navbar .nav > li {
+        width: 50%;
+    }
+}
+
+/* Orientation Portrait */
+@media screen and (orientation:portrait){}
+
+/* Orientation Paysage */
+@media screen and (orientation:landscape){ /* Styles à adapter pour le mode paysage */}
+
+@media screen and (device-aspect-ratio:16/9){}
+
+@media screen and (device-aspect-ratio:1280/720){}

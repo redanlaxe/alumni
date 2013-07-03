@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 avr. 2013 21:29:21 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.alumni.mapping.Anneedeformation" table="ANNEEDEFORMATION" schema="ALUMNI">
+        <id name="idformation" type="int">
+            <column name="IDFORMATION" />
+            <generator class="identity" />
+        </id>
+        <property name="anneeuniversitairedebut" type="int">
+            <column name="ANNEEUNIVERSITAIREDEBUT" not-null="true" />
+        </property>
+        <property name="anneeuniversitairefin" type="int">
+            <column name="ANNEEUNIVERSITAIREFIN" not-null="true" />
+        </property>
+        <property name="ecole" type="string">
+            <column name="ECOLE" length="50" not-null="true" />
+        </property>
+        <property name="libelle" type="string">
+            <column name="LIBELLE" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 avr. 2013 21:29:21 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.alumni.mapping.Experience" table="EXPERIENCE" schema="ALUMNI">
+        <id name="idexperience" type="int">
+            <column name="IDEXPERIENCE" />
+            <generator class="identity" />
+        </id>
+        <property name="identreprise" type="int">
+            <column name="IDENTREPRISE" not-null="true" />
+        </property>
+        <property name="idetudiant" type="int">
+            <column name="IDETUDIANT" not-null="true" />
+        </property>
+        <property name="typecontrat" type="string">
+            <column name="TYPECONTRAT" length="20" not-null="true" />
+        </property>
+        <property name="debut" type="date">
+            <column name="DEBUT" length="10" not-null="true" />
+        </property>
+        <property name="fin" type="date">
+            <column name="FIN" length="10" />
+        </property>
+        <property name="intituleposte" type="string">
+            <column name="INTITULEPOSTE" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

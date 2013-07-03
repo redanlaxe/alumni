@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="Connexion" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="mail"                     type="java.lang.String"/>
+            <form-property name="mdp"                      type="java.lang.String"/>
+            <form-property name="resteConnecte"            type="java.lang.String"/>
+        </form-bean>
+		
+        <form-bean name="InscriptionFormEtudiant" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="mail"			type="java.lang.String"/>
+            <form-property name="nom"			type="java.lang.String"/>
+            <form-property name="prenom"		type="java.lang.String"/>
+            <form-property name="mdp"			type="java.lang.String"/>
+            <form-property name="telephone"		type="java.lang.String"/>
+            <form-property name="adresse"		type="java.lang.String"/> 
+            <form-property name="dateNaissance"		type="java.lang.String"/>      
+            <form-property name="photoProfil"           type="org.apache.struts.upload.FormFile"/>     
+            <form-property name="cv"                    type="org.apache.struts.upload.FormFile"/>            
+            <form-property name="compte"		type="java.lang.String"/>      
+            <form-property name="souhaiteEmploi"	type="java.lang.String"/>      
+        </form-bean>      
+        <form-bean name="InscriptionFormEntreprise" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="mail"				type="java.lang.String"/>
+            <form-property name="nom"				type="java.lang.String"/>
+            <form-property name="prenom"			type="java.lang.String"/>
+            <form-property name="mdp"				type="java.lang.String"/>
+            <form-property name="telephone"			type="java.lang.String"/>
+            <form-property name="poste"				type="java.lang.String"/>
+            <form-property name="compte"			type="java.lang.String"/>      
+            <form-property name="entreprise"			type="java.lang.String"/>      
+            <form-property name="adresseEntreprise"		type="java.lang.String"/>      
+        </form-bean>  
+		
+        <form-bean name="ModifProfilForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="mail"				type="java.lang.String"/>
+            <form-property name="nom"				type="java.lang.String"/>
+            <form-property name="prenom"			type="java.lang.String"/>
+            <form-property name="mdp"				type="java.lang.String"/>
+            <form-property name="telephone"			type="java.lang.String"/>
+            <form-property name="adresse"			type="java.lang.String"/>
+            <form-property name="dateNaissance"                 type="java.lang.String"/> 
+            <form-property name="souhaiteEmploi"                type="java.lang.String"/>       
+            <form-property name="photoProfil"                   type="org.apache.struts.upload.FormFile"/>
+            <form-property name="cv"                            type="org.apache.struts.upload.FormFile"/>            
+        </form-bean>   
+		 
+        <form-bean name="ExperienceForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="typecontrat"   type="java.lang.String" />
+            <form-property name="debut"         type="java.lang.String" />
+            <form-property name="fin"           type="java.lang.String" />
+            <form-property name="intituleposte" type="java.lang.String" />
+            <form-property name="nomentreprise" type="java.lang.String" />
+            <form-property name="competence"    type="java.lang.String" />
+            <form-property name="listeComp"     type="java.lang.String" />
+            <form-property name="adresseEntreprise"		type="java.lang.String"/> 
+            <form-property name="salaire"       type="com.alumni.mapping.Salaire[]" size="20"/>
+        </form-bean>      
+        
+        <form-bean name="FormationForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="anneedeb"      type="java.lang.String" />
+            <form-property name="anneefin"      type="java.lang.String" />
+            <form-property name="ecole"         type="java.lang.String" />
+            <form-property name="libelle"       type="java.lang.String" />
+        </form-bean>    
+		
+        <form-bean name="DeconnexionForm"	type="org.apache.struts.action.DynaActionForm"/>
+        <form-bean name="ProfilForm"            type="org.apache.struts.action.DynaActionForm"/>
+        <form-bean name="annuairepublicform" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="anneedeb" type="java.lang.String"/>
+        </form-bean>    
+        <form-bean name="annuairepriveform" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="anneedeb" type="java.lang.String"/>
+        </form-bean> 
+        <form-bean name="statistique"           type="org.apache.struts.action.DynaActionForm"/>
+        <form-bean name="validationform"           type="org.apache.struts.action.DynaActionForm"/>
+        <form-bean name="inscriptionadminform"           type="org.apache.struts.action.DynaActionForm">
+            <form-property name="nom" type="java.lang.String"/>
+            <form-property name="prenom" type="java.lang.String"/>
+            <form-property name="mail" type="java.lang.String"/>
+            <form-property name="mdp" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="settings"           type="org.apache.struts.action.DynaActionForm"/>
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="index"                           path="/index.jsp"/>
+        <forward name="inscription/etudiant"		path="/inscription_etudiant.jsp"/>
+        <forward name="inscription/entreprise"		path="/inscription_entreprise.jsp"/>
+        <forward name="forgotmdp"                       path="/forgot.jsp"/>
+        <forward name="experience"                      path="/experience.jsp"/>
+        <forward name="annuaire"                        path="/annuairepublic.do"/>
+        <forward name="annuairepublic"                  path="/annuairepublic.do"/>
+        <forward name="profil"                          path="/profil.do"/>
+        <forward name="stats"                           path="/statistique.do"/>
+        <forward name="modifProfil"                     path="/modif_profil.jsp"/>
+        <forward name="validation"                      path="/validation.do"/>
+        <forward name="generer"                         path="/genererStats.do"/>
+        <forward name="deconnexion"                     path="/deconnexion.do"/>
+        <forward name="formation"                       path="/formation.jsp"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action path="/connexion" 
+                type="com.alumni.controller.Connexion" 
+                name="Connexion" 
+                scope="session" 
+                validate="true" 
+                input="/index.jsp">   
+            <forward name="successAdmin"		path="/validation.do" redirect="false" />
+            <forward name="successContact"		path="/annuairepublic.do" redirect="false" />
+            <forward name="successEtudiant"             path="/profil.do" redirect="false" />
+            <forward name="echec" path="/index.jsp" redirect="false" />
+        </action>
+        <action path="/deconnexion"
+                type="com.alumni.controller.Deconnexion"
+                name="DeconnexionForm"
+                scope="request"
+                input="/deconnexion">
+            <forward name="success" path="/index.jsp" redirect="false" />
+        </action>
+        
+                        		
+        <action path="/inscription/etudiant" 
+                type="com.alumni.controller.Inscription"
+                name="InscriptionFormEtudiant"
+                scope="request" 
+                input="/inscription_etudiant.jsp">
+            <forward name="success" path="/index.jsp" redirect="false" />
+        </action>
+        <action path="/inscription/entreprise" 
+                type="com.alumni.controller.Inscription"
+                name="InscriptionFormEntreprise"
+                scope="request" 
+                input="/inscription_entreprise.jsp">
+            <forward name="success" path="/index.jsp" redirect="false" />
+        </action>     
+        <action path="/getEntreprise"
+                type="com.alumni.controller.ajax.GetEntreprise"
+                scope="request">
+        </action>
+
+        <action path="/getCompetence"
+                type="com.alumni.controller.ajax.GetCompetence"
+                scope="request">
+        </action>       
+
+        <action path="/getLibelleFormation"
+                type="com.alumni.controller.ajax.GetLibelleFormation"
+                scope="request">
+        </action>  
+        
+        <action path="/getEcoleFormation"
+                type="com.alumni.controller.ajax.GetEcoleFormation"
+                scope="request">
+        </action>                                                    
+                                                               
+        <action path="/profil"
+                type="com.alumni.controller.Profil"
+                name="ProfilForm"
+                scope="request"
+                input="/profil.jsp">
+            <forward name="success" path="/profil.jsp" redirect="false" />
+            <forward name="success_show" path="/profil_show.jsp" redirect="false" />
+            <forward name="echec" path="/index.jsp" redirect="false" />             
+        </action>
+        <action path="/modifProfil"
+                type="com.alumni.controller.ModifProfil"
+                name="ModifProfilForm"
+                scope="request" 
+                input="/modif_profil.jsp">
+            <forward name="success" path="/profil.do" redirect="false" />
+            <forward name="echec" path="/modif_profil.jsp" redirect="false" /> 
+        </action>
+        <action path="/experience"
+                type="com.alumni.controller.Experience"
+                name="ExperienceForm"
+                scope="request"
+                input="/experience.jsp">
+                <forward name="success" path="/profil.do" redirect="false" />
+                <forward name="echec" path="/experience.jsp" redirect="false" />
+        </action>
+
+        
+        <action path="/annuairepublic" 
+                type="com.alumni.controller.AnnuairePublic" 
+                input="/annuaire_public.jsp" 
+                scope="request"
+                name="annuairepublicform">
+                <forward name="success" path="/annuaire_public.jsp" redirect="false" />
+                <forward name="echec" path="/annuaire_public.jsp" redirect="false" />
+        </action>
+        
+        <action path="/validation" 
+                type="com.alumni.controller.Validation" 
+                input="/validation.jsp" 
+                scope="request"
+                name="validationform">
+                <forward name="success" path="/validation.jsp" redirect="false" />
+                <forward name="echec" path="/validation.jsp" redirect="false" />
+        </action>
+
+        <action path="/statistique" 
+                type="com.alumni.controller.Statistique" 
+                name="statistique"
+                input="/stats.jsp" 
+                scope="request">
+        </action>
+		<action path="/genererStats" 
+                type="com.alumni.controller.GenererStats" 
+                name="statistique"
+                input="/statistique.do" 
+                scope="request">
+        </action>
+        
+         <action input="/inscription_admin.jsp" 
+                name="inscriptionadminform" 
+                path="/inscriptionadmin" 
+                scope="request" 
+                type="com.alumni.controller.InscriptionAdmin">
+            <forward name="success" path="/inscription_admin.jsp" redirect="false" />
+        </action>
+        <action path="/formation"
+                type="com.alumni.controller.Formation"
+                name="FormationForm"
+                scope="request"
+                input="/formation.jsp">
+            <forward name="success" path="/profil.do" redirect="false" />
+            <forward name="echec" path="/formation.jsp" redirect="false" />
+        </action>
+        <action path="/annuaireprive" 
+                type="com.alumni.controller.AnnuairePrive" 
+                input="/annuaire_prive.jsp" 
+                scope="request"
+                name="annuairepriveform">
+                <forward name="success" path="/annuaire_prive.jsp" redirect="false" />
+                <forward name="echec" path="/annuaire_prive.jsp" redirect="false" />
+        </action>
+        <action path="/settings" 
+                type="com.alumni.controller.Settings" 
+                name="settings"
+                input="/profil.jsp" 
+                scope="request">
+                <forward name="delete" path="/profil.do" redirect="false" />
+                <forward name="echec" path="/index.jsp" redirect="false" />
+                <forward name="update_form" path="/formation.jsp" redirect="false" />
+                <forward name="update_exp" path="/modif_experience.jsp" redirect="false" />            
+        </action>
+
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

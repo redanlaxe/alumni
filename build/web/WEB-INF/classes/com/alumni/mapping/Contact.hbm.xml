@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 avr. 2013 21:29:21 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.alumni.mapping.Contact" table="CONTACT" schema="ALUMNI">
+        <id name="idcontact" type="int">
+            <column name="IDCONTACT" />
+            <generator class="identity" />
+        </id>
+        <property name="nom" type="string">
+            <column name="NOM" length="50" not-null="true" />
+        </property>
+        <property name="prenom" type="string">
+            <column name="PRENOM" length="50" not-null="true" />
+        </property>
+        <property name="mail" type="string">
+            <column name="MAIL" not-null="true" />
+        </property>
+        <property name="mdp" type="string">
+            <column name="MDP" length="255" not-null="true" />
+        </property>
+        <property name="telephone" type="string">
+            <column name="TELEPHONE" length="20" />
+        </property>
+        <property name="poste" type="string">
+            <column name="POSTE" length="100" />
+        </property>
+        <property name="identreprise" type="int">
+            <column name="IDENTREPRISE" not-null="true" />
+        </property>
+        <property name="validation" type="string">
+            <column name="VALIDATION" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

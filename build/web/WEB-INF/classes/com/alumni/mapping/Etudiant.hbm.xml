@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 avr. 2013 21:29:21 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.alumni.mapping.Etudiant" table="ETUDIANT" schema="ALUMNI">
+        <id name="idetudiant" type="int">
+            <column name="IDETUDIANT" />
+            <generator class="identity" />
+        </id>
+        <property name="nom" type="string">
+            <column name="NOM" length="50" not-null="true" />
+        </property>
+        <property name="prenom" type="string">
+            <column name="PRENOM" length="50" not-null="true" />
+        </property>
+        <property name="mail" type="string">
+            <column name="MAIL" not-null="true" />
+        </property>
+        <property name="mdp" type="string">
+            <column name="MDP" length="255" not-null="true" />
+        </property>
+        <property name="adresse" type="string">
+            <column name="ADRESSE" />
+        </property>
+        <property name="telephone" type="string">
+            <column name="TELEPHONE" length="20" />
+        </property>
+        <property name="datenaissance" type="date">
+            <column name="DATENAISSANCE" length="10" />
+        </property>
+        <property name="photoprofil" type="string">
+            <column name="PHOTOPROFIL" />
+        </property>
+        <property name="cv" type="string">
+            <column name="CV" />
+        </property>
+        <property name="souhaiteemploi" type="string">
+            <column name="SOUHAITEEMPLOI" length="1" />
+        </property>
+        <property name="validation" type="string">
+            <column name="VALIDATION" length="1" />
+        </property>
+        <set name="anneeformation" table="ALUMNI.ETUDIANTANNEE" cascade="all">
+            <key column="IDETUDIANT" />
+            <many-to-many column="IDFORMATION"  class="com.alumni.mapping.Anneedeformation" />
+        </set>
+    </class>
+</hibernate-mapping>
