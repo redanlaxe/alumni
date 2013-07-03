@@ -12,12 +12,11 @@
     <body>
         <%@include file="includes/menu.jsp" %>
         <div class="annuaire">
-            <h1>Annuaire public</h1>
+            <h2>Annuaire public</h2>
 
             <html:errors/>
 
             <html:form styleClass="form-inline" action="/annuairepublic">
-                <label for="anneedeb"><bean:message key="label.affine"/></label>
                 <html:text property="anneedeb" styleId="anneedeb"/>
                 <html:submit styleClass="btn btn-primary" value="Affiner"/>
             </html:form>
@@ -29,7 +28,7 @@
                     </b>
                 </logic:equal>
                 <logic:greaterThan name="size" value="0">
-                    <table class="table table-striped table-hover table-bordered">
+                    <table class="table table-hover">
                         <tr>
                             <th>Voir Profil</th>
                             <th>Prenom</th>
@@ -37,7 +36,7 @@
                             <th>Email</th>
                             <th>Téléphone</th>
                             <th>CV</th>
-							<th>Recherche Emploi</th>
+                            <th>Recherche Emploi</th>
                         </tr>
                         <logic:iterate id="etudiant" name="etudiants">
                             <tr>
@@ -49,11 +48,15 @@
                                 <td><a href="<bean:write name="etudiant" property="cv"/>">CV</a></td>
                                 <td><logic:present name="etudiant" property="souhaiteemploi">
                                         <logic:equal name="etudiant" property="souhaiteemploi" value="y">
-                                            Oui
-                                        </logic:equal>
+                                            <span class="label label-success">
+                                                Oui
+                                            </span>
+                                            </logic:equal>                                        
                                         <logic:equal name="etudiant" property="souhaiteemploi" value="n">
-                                            Non
-                                        </logic:equal>
+                                            <span class="label label-important">
+                                                Non
+                                            </span>
+                                            </logic:equal>
                                     </logic:present>
                                 </td>
                             </tr>
@@ -71,7 +74,7 @@
                     <ul>
                         <logic:iterate id="nbPageId" name="nbPage">
                             <li><a href="annuairepublic.do?p=<bean:write name="nbPageId"/>"><bean:write name="nbPageId"/></a></li>
-                            </logic:iterate>
+                        </logic:iterate>
                     </ul>
                 </div>
             </logic:present>
@@ -79,7 +82,7 @@
         <%@include file="includes/footer.jsp" %>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>
-                                    $("#anneedeb").attr("placeholder", "Année d'étude")
+            $("#anneedeb").attr("placeholder", "Année d'étude")
         </script>
     </body>
 </html>
