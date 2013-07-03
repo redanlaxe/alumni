@@ -18,7 +18,7 @@
 
             <html:form styleClass="form-inline" action="/annuairepublic">
                 <html:text property="anneedeb" styleId="anneedeb"/>
-                <html:submit styleClass="btn btn-primary" value="Affiner"/>
+                <html:submit styleClass="btn btn-primary" value="Filtrer"/>
             </html:form>
             <logic:present name="etudiants">
                 <bean:size id="size" name="etudiants"/>
