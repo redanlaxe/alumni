@@ -78,14 +78,17 @@ input[type=password]:focus{
 **/
 .navbar-inner {
     background-color: white;
+    min-height: 80px;
 }
 .navbar .brand {
-padding: 0px 20px 0px;
+    padding: 4px 20px 0px;
+    margin-bottom: 4px;
 }
 .navbar-inner .nav > li > a {
-    padding: 40px 30px;
+    padding: 34px 30px;
     font-size: 18px;
-    color: #263f82;
+    color: black;
+    text-transform: uppercase;
 }
 .navbar-inner .nav > li > a:hover {
     background-color: #bec3c7;
@@ -135,7 +138,6 @@ padding: 0px 20px 0px;
 }
 .connexion form,
 .connexion div.inscription{
-    width: 60%;
     margin: 0 auto;
 }
 .connexion div.inscription2 {

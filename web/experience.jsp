@@ -6,51 +6,56 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Expériences</title>
+        <title>Ajouter une expérience</title>
         <%@include file="includes/header.jsp" %> 
         <link rel="stylesheet" href="css/jquery-ui-1.10.2.custom.min.css">
     </head>
     <body>
         <%@include file="includes/menu.jsp" %> 
-        <h1>Expériences</h1>
+        <h1>Ajouter une expérience</h1>
         <div class="experience">
-            <html:errors/>
-
+            <html:errors/>            
             <html:form action="/experience" styleClass="box">
-                <label for="typecontrat"><bean:message key="label.experience.typecontrat" /></label>
-                <html:select property="typecontrat" >
-                    <html:option value="0">Type de contrat</html:option>
-                    <html:option value="cdd">CDD</html:option>
-                    <html:option value="cdi">CDI</html:option>
-                    <html:option value="stage">Stage</html:option>
-                </html:select>
-                <label for="debut"><bean:message key="label.experience.debut" /></label>
-                <html:text property="debut" styleClass="datepicker" styleId="debut"/>
-                <label for="fin"><bean:message key="label.experience.fin" /></label>
-                <html:text property="fin" styleClass="datepicker" styleId="fin"/>
-                <label for="intituleposte"><bean:message key="label.experience.intituleposte" /></label>
-                <html:text property="intituleposte" />
-                <div class="control-group">
-                    <label class="control-label" for="nomentreprise"><bean:message key="label.entreprise" /></label>
-                    <div class="controls">
-                        <html:text styleId="nomentreprise" property="nomentreprise" />
+                <div class="row-fluid">
+                    <div class="span6">
+                        <label for="typecontrat"><bean:message key="label.experience.typecontrat" /></label>
+                        <html:select property="typecontrat" >
+                            <html:option value="0">Type de contrat</html:option>
+                            <html:option value="cdd">CDD</html:option>
+                            <html:option value="cdi">CDI</html:option>
+                            <html:option value="stage">Stage</html:option>
+                        </html:select>
+                        <label for="debut"><bean:message key="label.experience.debut" /></label>
+                        <html:text property="debut" styleClass="datepicker" styleId="debut"/>
+                        <label for="fin"><bean:message key="label.experience.fin" /></label>
+                        <html:text property="fin" styleClass="datepicker" styleId="fin"/>
+                        <label for="intituleposte"><bean:message key="label.experience.intituleposte" /></label>
+                        <html:text property="intituleposte" />
+                        <div class="control-group">
+                            <label class="control-label" for="nomentreprise"><bean:message key="label.entreprise" /></label>
+                            <div class="controls">
+                                <html:text styleId="nomentreprise" property="nomentreprise" />
+                            </div>
+                        </div>
+                        <div class="control-group adresseEntreprise">
+                            <label class="control-label" for="adresseEntreprise"><bean:message key="label.adresse.entreprise" /></label>
+                            <div class="controls">
+                                <html:text styleId="adresseEntreprise" property="adresseEntreprise" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <h2> Compétences</h2>
+                        <div id="champsCompetences"></div>
+                        <html:text property="competence" styleId="competence"/>
+                        <span id="addCompetence" class="btn">Ajouter</span>
+                        <html:hidden property="listeComp" styleId="listeComp" />
+                        <h2> Salaires</h2>
+                        <span id="addSalaire" class="btn" onclick="addSalaire();">Salaire</span>
+                        <div id="champsSalaire"></div><br>
+                        <html:submit value="Ajouter Expérience" styleClass="box btn btn-large btn-primary"/>
                     </div>
                 </div>
-                <div class="control-group adresseEntreprise">
-                    <label class="control-label" for="adresseEntreprise"><bean:message key="label.adresse.entreprise" /></label>
-                    <div class="controls">
-                        <html:text styleId="adresseEntreprise" property="adresseEntreprise" />
-                    </div>
-                </div>
-                <h2> Compétences</h2>
-				<div id="champsCompetences"></div>
-                <html:text property="competence" styleId="competence"/>
-				<span id="addCompetence" class="btn">Ajouter</span>
-                <html:hidden property="listeComp" styleId="listeComp" />
-                <h2> Salaires</h2>
-                <span id="addSalaire" class="btn" onclick="addSalaire();">Salaire</span>
-                <div id="champsSalaire"></div>
-                <html:submit value="Ajouter Expérience" styleClass="btn btn-large btn-primary"/>	
             </html:form>
         </div>
         <%@include file="includes/footer.jsp" %>
@@ -59,19 +64,19 @@
         <script type="text/javascript">
             var counter=0;
             $(document).ready(function() {
-				$("#addCompetence").click(function() {
-					var val = $('#competence').val();
-					var actuel = $('#listeComp').val();
-					if (actuel.indexOf(val)	== -1) {
-						if (actuel.length > 0) {
-							$('#listeComp').val(actuel + ";" + val);
-						} else {
-							$('#listeComp').val(val);
-						}
-						$('#competence').val("");
-						$("#champsCompetences").append('<span class="competence">'+val+'</span>')
-					}	
-				});
+                $("#addCompetence").click(function() {
+                    var val = $('#competence').val();
+                    var actuel = $('#listeComp').val();
+                    if (actuel.indexOf(val)	== -1) {
+                        if (actuel.length > 0) {
+                            $('#listeComp').val(actuel + ";" + val);
+                        } else {
+                            $('#listeComp').val(val);
+                        }
+                        $('#competence').val("");
+                        $("#champsCompetences").append('<span class="label label-info">'+val+'</span>')
+                    }	
+                });
                 $.datepicker.setDefaults($.datepicker.regional[ "fr" ]);
                 $(".datepicker").datepicker({
                     showButtonPanel: true,
@@ -98,17 +103,17 @@
                             source: listCompetence,
                             minLength: 1,
                             close: function(event, ui) {
-								var val = $('#competence').val();
-								var actuel = $('#listeComp').val();
-								if (actuel.indexOf(val)	== -1) {
-									if (actuel.length > 0) {
-										$('#listeComp').val(actuel + ";" + val);
-									} else {
-										$('#listeComp').val(val);
-									}
-									$('#competence').val("");
-									$("#champsCompetences").append('<span class="competence">'+val+'</span>')
-								}
+                                var val = $('#competence').val();
+                                var actuel = $('#listeComp').val();
+                                if (actuel.indexOf(val)	== -1) {
+                                    if (actuel.length > 0) {
+                                        $('#listeComp').val(actuel + ";" + val);
+                                    } else {
+                                        $('#listeComp').val(val);
+                                    }
+                                    $('#competence').val("");
+                                    $("#champsCompetences").append('<span class="label label-info">'+val+'</span>')
+                                }
                                 searchCompetence();
                             }
                         });

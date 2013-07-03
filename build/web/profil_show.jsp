@@ -17,7 +17,7 @@
         </logic:present>
         <div class="profil">
             <h2>${prenomEtudiant} ${nomEtudiant}</h2>
-            <a target="_blank" href="mailto:<bean:write name="etudiant_show" property="mail"/>" onclick="window.open(this.href, '', config='height=500, width=800')">Envoyer un e-mail</a>
+            <a href="mailto:<bean:write name="etudiant_show" property="mail"/>">Envoyer un e-mail</a>
             <html:errors/>
             <h3>Formation</h3>
             <logic:present name="anneesformation">
