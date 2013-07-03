@@ -44,7 +44,6 @@
                             <th>Salaire</th>
                             <th>Competence</th>
                             <th>Entreprise</th>
-                            <th>Modifier </th>
                             <th>Supprimer </th>
                         </tr>
                         <logic:iterate id="experience" name="experiences">
@@ -107,7 +106,6 @@
                                         </td>
                                     </logic:greaterThan>
                                 </logic:present>
-                                <td><html:link href="./settings.do?idEtu=${idEtu}&idExp=${idExp}&action=u">Modifier</html:link></td>
                                 <td><html:link href="./settings.do?idEtu=${idEtu}&idExp=${idExp}&action=d" onclick="return(confirm('Etes vous sur de vouloir supprimer cette expérience ?'))">Supprimer</html:link></td>
                             </tr>
                         </logic:iterate>
