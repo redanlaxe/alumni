@@ -12,11 +12,7 @@
     <body>
         <%@include file="includes/menu.jsp" %> 
         <div class="connexion">
-<<<<<<< HEAD
             <h1>Alumni MIAGE Sorbonne</h1>
-=======
-            <h1>ALUMNI - MIAGE SORBONNE</h1>
->>>>>>> 1c632adb84a5976ccda30ad6c3820b46bd888946
 
             <div class="page1">
                 <div class="row-fluid">
@@ -77,45 +73,9 @@
                                 </div>
                         </html:form>
                     </div>
-<<<<<<< HEAD
-                    <div class="span6">
-                        <div class="inscription">
-                            <div class="inscription-inside">
-                                <h2>Pas de compte</h2>
-                                <p class="indic">S'inscrire</p>
-                                <div class="sign-btn" title="Inscription"></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <div class="row-fluid page2">
-                <div class="row-fluid">
-                    <div class="span12">
-                        <h2 class="big pagination-centered">Qui suis-je ?</h2>
-                    </div>
-                </div>
-                <div class="row-fluid">
-                    <div class="span6 br">
-                        <div class="inscription2">
-                            <div class="fleche_gauche"></div>
-                            <html:link forward="inscription/etudiant"><h2>Etudiant</h2></html:link>
-                                <p class="indic">Etudiant à l'Université Paris 1 Panthéon-Sorbonne ?</p>
-                            <html:link styleClass="user-btn" title="Inscription" forward="inscription/etudiant"/>
-                        </div>
-                    </div>
-                    <div class="span6">
-                        <div class="inscription2">
-                            <div class="fleche_droite"></div>
-                            <html:link forward="inscription/entreprise"><h2>Entreprise</h2></html:link>
-                                <p class="indic">Je suis une entreprise et souhaite recruter un miagiste ?</p>
-                            <html:link styleClass="entre-btn" title="Inscription" forward="inscription/entreprise"/>
-                        </div>
-                    </div>
-=======
->>>>>>> 1c632adb84a5976ccda30ad6c3820b46bd888946
-                </div>
             </div>
         </div>
         <%@include file="includes/footer.jsp" %> 

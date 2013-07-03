@@ -41,11 +41,6 @@
                             <th>Type de contrat</th>
                             <th>Salaire</th>
                             <th>Competence</th>
-<<<<<<< HEAD
-                            <th>Modifier </th>
-=======
-                            <th>Entreprise</th>
->>>>>>> 1c632adb84a5976ccda30ad6c3820b46bd888946
                             <th>Supprimer </th>
                         </tr>
                         <logic:iterate id="experience" name="experiences">
@@ -103,12 +98,7 @@
                                         </td>
                                     </logic:greaterThan>
                                 </logic:present>
-<<<<<<< HEAD
-                                <td><html:link href="./settings.do?idEtu=${idEtu}&idExp=${idExp}&action=u">Modifier</html:link></td>
-                                <td><html:link href="./settings.do?idEtu=${idEtu}&idExp=${idExp}&action=d" onclick="return(confirm('Confirmer la suppression de l'expérience ?'))">Supprimer</html:link></td>
-=======
                                 <td><html:link href="./settings.do?idEtu=${idEtu}&idExp=${idExp}&action=d" onclick="return(confirm('Etes vous sur de vouloir supprimer cette expérience ?'))">Supprimer</html:link></td>
->>>>>>> 1c632adb84a5976ccda30ad6c3820b46bd888946
                             </tr>
                         </logic:iterate>
                     </table>
