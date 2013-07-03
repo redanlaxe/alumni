@@ -6,25 +6,23 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Alumni - Mes expériences</title>
+        <title>Expériences</title>
         <%@include file="includes/header.jsp" %> 
         <link rel="stylesheet" href="css/jquery-ui-1.10.2.custom.min.css">
     </head>
     <body>
         <%@include file="includes/menu.jsp" %> 
-        <h1>Mes expériences</h1>
+        <h1>Expériences</h1>
         <div class="experience">
             <html:errors/>
 
             <html:form action="/experience" styleClass="box">
                 <label for="typecontrat"><bean:message key="label.experience.typecontrat" /></label>
                 <html:select property="typecontrat" >
-                    <html:option value="0">Selectionner type de contrat</html:option>
+                    <html:option value="0">Type de contrat</html:option>
                     <html:option value="cdd">CDD</html:option>
                     <html:option value="cdi">CDI</html:option>
                     <html:option value="stage">Stage</html:option>
-                    <html:option value="freelance">Freelance</html:option>
-                    <html:option value="interim">Interim</html:option>
                 </html:select>
                 <label for="debut"><bean:message key="label.experience.debut" /></label>
                 <html:text property="debut" styleClass="datepicker" styleId="debut"/>
@@ -50,7 +48,7 @@
 				<span id="addCompetence" class="btn">Ajouter</span>
                 <html:hidden property="listeComp" styleId="listeComp" />
                 <h2> Salaires</h2>
-                <span id="addSalaire" class="btn" onclick="addSalaire();">Associer un salaire</span>
+                <span id="addSalaire" class="btn" onclick="addSalaire();">Salaire</span>
                 <div id="champsSalaire"></div>
                 <html:submit value="Ajouter Expérience" styleClass="btn btn-large btn-primary"/>	
             </html:form>

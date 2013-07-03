@@ -11,12 +11,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Valider</title>
         <%@include file="includes/header.jsp" %>
     </head>
     <body>
         <%@include file="includes/menu.jsp" %>
-        <h1>Validation</h1>
+        <h1>Valider</h1>
 
         <html:errors/>
 
@@ -25,16 +25,16 @@
             <bean:size id="size" name="nonvalides"/>
             <logic:equal name="size" value="0">
                 <b>
-                    Aucun étudiant à valider.
+                    Pas d'étudiant à valider
                 </b>
             </logic:equal>
             <logic:greaterThan name="size" value="0">
-                <h2>Etudiant(s) en attente</h2>
+                <h2>Etudiant(es) à valider</h2>
                 <table class="table table-striped table-hover table-bordered">
                     <tr>
-                        <th>Prenom</th>
+                        <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Adresse e-mail</th>
+                        <th>Email</th>
                         <th>Date de naissance</th>
                         <th>Valider</th>
                         <th>Refuser</th>
@@ -49,7 +49,7 @@
                             <bean:define id="nom" name="etudiant" property="nom"/>
                             <bean:define id="prenom" name="etudiant" property="prenom"/>
                             <td><html:link styleClass="btn btn-success" href="validation.do?id=${identifiant}&action=valider&type=etudiant" >V</html:link></td>
-                            <td><html:link styleClass="btn btn-danger" href="validation.do?id=${identifiant}&action=invalider&type=etudiant" onclick="return(confirm('Etes vous sur que ${prenom} ${nom} n est pas un étudiant ?'));">X</html:link></td>
+                            <td><html:link styleClass="btn btn-danger" href="validation.do?id=${identifiant}&action=invalider&type=etudiant" onclick="return(confirm('Confirmez-vous que ${nom} ${prenom} n est pas un étudiant ?'));">X</html:link></td>
                             </tr>
                     </logic:iterate>
                 </table>
@@ -61,17 +61,17 @@
             <bean:size id="size" name="cnonvalides"/>
             <logic:equal name="size" value="0">
                 <b>
-                    Aucun contact d'entreprise à valider.
+                    Pas de contact d'entreprise à valider
                 </b>
             </logic:equal>
             <logic:greaterThan name="size" value="0">
-                <h2>Contact(s) d'entreprise en attente</h2>
+                <h2>Contact(s) d'entreprise à valider</h2>
                 <table class="table table-striped table-hover table-bordered">
                     <tr>
-                        <th>Entreprise</th>
+                        <th>Nom de l'entreprise</th>
                         <th>Poste</th>
-                        <th>Prénom & Nom</th>
-                        <th>Adresse e-mail</th>
+                        <th>Personne à contacter</th>
+                        <th>Email</th>
                         <th>Téléphone</th>
                         <th>Valider</th>
                         <th>Refuser</th>
@@ -99,7 +99,7 @@
                             <bean:define id="nom" name="contact" property="nom"/>
                             <bean:define id="prenom" name="contact" property="prenom"/>
                             <td><html:link styleClass="btn btn-success" href="validation.do?id=${identifiant}&action=valider&type=contact" >V</html:link></td>
-                            <td><html:link styleClass="btn btn-danger" href="validation.do?id=${identifiant}&action=invalider&type=contact" onclick="return(confirm('Etes vous sur que ${prenom} ${nom} n est pas un contact d entreprise ?'));">X</html:link></td>
+                            <td><html:link styleClass="btn btn-danger" href="validation.do?id=${identifiant}&action=invalider&type=contact" onclick="return(confirm('Confirmez-vous que ${nom} ${prenom} n est pas un contact d entreprise ?'));">X</html:link></td>
                             </tr>
                     </logic:iterate>
                 </table>

@@ -6,13 +6,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Université Paris 1 - Statistique</title>
+        <title>Stats</title>
         <%@include file="includes/header.jsp" %> 
     </head>
     <body>
         <%@include file="includes/menu.jsp" %> 
         <div class="statistique">
-            <h1>Section Statistique</h1>
+            <h1>Stats</h1>
             <div class="row-fluid">
                 <div class="span12">
                     <html:errors/>
@@ -23,7 +23,7 @@
                     <ul class="nav nav-tabs" id="stats">
                         <li class="active"><a href="#salaire">Salaire</a></li>
                         <li><a href="#competence">Compétences</a></li>
-                        <li><a href="#contrat">Type de contrat</a></li>
+                        <li><a href="#contrat">Type contrat</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="salaire">
@@ -31,18 +31,18 @@
                             <logic:present name="salaireEmbauche">
                                 <bean:size id="size" name="contrats"/>
                                 <logic:equal name="size" value="0">
-                                    <b>Aucune moyenne possible</b>
+                                    <b>Pas de moyenne</b>
                                 </logic:equal>
                                 <logic:greaterThan name="size" value="0">
                                     <bean:write name="salaireEmbauche"/>
                                 </logic:greaterThan>
                             </logic:present>
 
-                            <h2>Salaire moyen actuel</h2>
+                            <h2>Salaire moyen</h2>
                             <logic:present name="salaireActuel">
                                 <bean:size id="size" name="contrats"/>
                                 <logic:equal name="size" value="0">
-                                    <b>Aucune moyenne possible</b>
+                                    <b>Pas de moyenne</b>
                                 </logic:equal>
                                 <logic:greaterThan name="size" value="0">
                                     <bean:write name="salaireActuel"/>

@@ -166,17 +166,5 @@ public class Experience extends SuperAction {
         }
         saveErrors(request, errors);
         return mapping.findForward(ECHEC);
-
-        /*
-         int i = 0;
-
-         while (i < salaireLines.length) {
-         // Afin de ne pas parcourir tout le tab Salaire
-         if (salaireLines[i].getValeur() == null) {
-         break;
-         }
-         System.out.println(salaireLines[i].getValeur());
-         i++;
-         }*/
     }
 }

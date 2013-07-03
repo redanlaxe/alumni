@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Completer son profil</title>
+        <title>Modifier profil</title>
         <%@include file="includes/header.jsp" %>
     </head>
     <body>
@@ -22,35 +22,30 @@
             <bean:define id="prenomEtudiant" name="etudiant_show" property="prenom" type="java.lang.String"/>
         </logic:present>
         <div class="profil">
-            <h1>Profil de ${prenomEtudiant} ${nomEtudiant}</h1>
-            <a target="_blank" href="mailto:<bean:write name="etudiant_show" property="mail"/>" onclick="window.open(this.href, '', config='height=500, width=800')">Envoyer un e-mail</a>
+            <h1>Profil : ${prenomEtudiant} ${nomEtudiant}</h1>
+            <a target="_blank" href="mailto:<bean:write name="etudiant_show" property="mail"/>" onclick="window.open(this.href, '', config='height=500, width=800')">Envoyer un mail</a>
             <html:errors/>
-            <h2>Expérience(s) </h2>            
-            <!-- On récupère les experiences de l'etudiant -->
+            <h2>Expériences </h2>            
             <logic:present name="experiences">
                 <bean:size id="size" name="experiences"/>
                 <logic:equal name="size" value="0">
-                    <b>Aucune expérience renseignée</b>
+                    <b>Aucune expérience</b>
                 </logic:equal>
-                <!-- L'étudiant à au moins une experience -->
 
                 <logic:greaterThan name="size" value="0">
                     <table class="table table-striped table-bordered">
                         <tr>
+                            <th>Entreprise</th>
                             <th>Poste</th>
                             <th>Type de contrat</th>
                             <th>Competence</th>
-                            <th>Entreprise</th>
                         </tr>
                         <logic:iterate id="experience" name="experiences">
-                            <tr>
-                                <!-- Infos de l'experience -->                   
+                            <tr>                
                                 <td><bean:write name="experience" property="intituleposte"/></td> 
                                 <td><bean:write name="experience" property="typecontrat"/></td>
-                                <!-- On pose une variable qui nous permet de savoir si l'idExperience correspond aux idexperience se trouvant dans salaire, ... -->
                                 <bean:define id="idExp" name="experience" property="idexperience" type="java.lang.Integer"/>
                                 <bean:define id="idEnt" name="experience" property="identreprise" type="java.lang.Integer"/>
-                                <!-- Infos des compétences associés -->
                                 <td class="column-competence">
                                     <logic:present name="competences">
                                         <bean:size id="sizeComp" name="competences"/>
@@ -66,7 +61,6 @@
                                         </logic:greaterThan>
                                     </td>
                                 </logic:present>
-                                <!-- Infos des entreprises associés -->
                                 <logic:present name="entreprises">
                                     <bean:size id="sizeEnt" name="entreprises"/>
                                     <logic:greaterThan name="sizeEnt" value="0">
@@ -84,19 +78,19 @@
                     </table>
                 </logic:greaterThan>
             </logic:present>
-            <h2>Formation(s)</h2>
+            <h2>Formations</h2>
             <logic:present name="anneesformation">
 
                 <bean:size id="size" name="anneesformation"/>
                 <logic:equal name="size" value="0">
-                    <b>Aucune expérience renseignée</b>
+                    <b>Aucune formation</b>
                 </logic:equal>
                 <logic:greaterThan name="size" value="0">
                     <table class="table table-striped table-hover table-bordered">
                         <tr>
-                            <th>Année de formation</th>
-                            <th>Ecole</th>
+                            <th>Etablissement</th>
                             <th>Formation</th>
+                            <th>Année</th>
                         </tr>
 
                         <logic:iterate id="anneeformation" name="anneesformation">

@@ -36,7 +36,6 @@ public class GetEcoleFormation extends SuperAction {
         if (name != null) {
             Object[] param = {name};
             String ecole = (String) f.lancerMethode(param, "getEcoleFormation");
-            System.out.println("SEARCH pour " + name + " donne : " + ecole);
             if (ecole != null) {
                 response.getWriter().print(ecole);
             }

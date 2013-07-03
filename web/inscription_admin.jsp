@@ -12,12 +12,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Inscription Admin</title>
+        <title>Admin</title>
         <%@include file="includes/header.jsp" %> 
     </head>
     <body>
         <%@include file="includes/menu.jsp" %>
-        <h1>Enregistrement d'un admin</h1>
+        <h1>Inscrire un admin</h1>
         <h2>
             Liste des administrateurs
         </h2>
@@ -28,7 +28,7 @@
             <bean:size id="size" name="administrateurs"/>
             <logic:equal name="size" value="0">
                 <b>
-                    Tous les étudiants ont été validés
+                    Aucun étudiant à valider
                 </b>
             </logic:equal>
             <logic:greaterThan name="size" value="0">
@@ -36,8 +36,8 @@
                     <tr>
                         <th>Nom
                         <th>Prenom</th>
-                        <th>Adresse e-mail</th>
-                        <th>mdp</th>
+                        <th>Email</th>
+                        <th>Mot de passe</th>
                     </tr>
                     <logic:iterate id="administrateur" name="administrateurs">
                         <tr>
@@ -57,7 +57,7 @@
         <table>
             <tr>
                 <th colspan="2">
-                    Inscription
+                    S'inscrire
                 </th>  
             </tr>
             <tr>
