@@ -4,10 +4,6 @@
  */
 package com.alumni.controller;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Collections;
@@ -19,9 +15,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.ActionMessages;
-import org.apache.struts.upload.FormFile;
 
 /**
  *
@@ -69,55 +62,6 @@ public class Alumni {
             }
         }
         return true;
-    }
-
-    /**
-     * Fonction permettant d'upload un fichier dans un dossier donné
-     *
-     * @param formFile fichier que l'on veut upload
-     * @param dossierDest chemin du dossier de destination
-     * @param listeExtension liste des extensions acceptées pour l'upload
-     * @param tailleMax taille max pour l'upload
-     * @param errors ActionMessages dans lequel on va insérer les erreur
-     * @param erreurFichier nom de l'erreur pour le fichier
-     * @return
-     */
-    public static ActionMessages uploadFile(FormFile formFile, String dossierDest, List listeExtension, int tailleMax, ActionMessages errors, String erreurFichier) {
-        if (formFile.getFileSize() <= tailleMax) {
-            // Calcul de l'extension du fichier, vu qu'il manque une méthode pour la connaitre dans FormFile
-            String ext = formFile.getFileName().substring(formFile.getFileName().indexOf("."));
-            if (listeExtension.contains(ext)) {
-                File destination = new File(dossierDest, formFile.getFileName());
-
-                try {
-                    FileOutputStream fileOutputStream = new FileOutputStream(destination);
-
-                    byte[] buffer = new byte[formFile.getFileSize()];
-
-                    int bulk;
-                    InputStream inputStream = formFile.getInputStream();
-                    while (true) {
-                        bulk = inputStream.read(buffer);
-                        if (bulk < 0) {
-                            break;
-                        }
-                        fileOutputStream.write(buffer, 0, bulk);
-                        fileOutputStream.flush();
-
-                        fileOutputStream.close();
-                        inputStream.close();
-                    }
-                } catch (IOException e) {
-                    errors.add("errorMessage", new ActionMessage("error.profil." + erreurFichier + ".probleme"));
-                    return errors;
-                }
-            } else {
-                errors.add("errorMessage", new ActionMessage("error.profil." + erreurFichier + ".extension"));
-            }
-        } else {
-            errors.add("errorMessage", new ActionMessage("error.profil." + erreurFichier + ".size"));
-        }
-        return errors;
     }
 
     public static String sha1(String input) throws NoSuchAlgorithmException {

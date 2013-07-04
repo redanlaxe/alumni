@@ -14,7 +14,6 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
 import org.apache.struts.action.DynaActionForm;
-import org.apache.struts.upload.FormFile;
 
 public class Inscription extends SuperAction {
 
@@ -47,7 +46,6 @@ public class Inscription extends SuperAction {
 		String adresse = null;
 		String date = null;
 		String photoProfil = null;
-		FormFile cv = null;
 		String souhaiteEmploi = null;
 		String poste = null;
 		String nomEntreprise = null;
@@ -58,8 +56,6 @@ public class Inscription extends SuperAction {
 			 */
 			adresse = inscriptionForm.getString("adresse");
 			date = inscriptionForm.getString("dateNaissance");
-			photoProfil = inscriptionForm.getString("photoProfil");
-			cv = (FormFile) inscriptionForm.get("cv");
 			souhaiteEmploi = (String) inscriptionForm.get("souhaiteEmploi");
 			if (souhaiteEmploi.isEmpty()) {
 				souhaiteEmploi = "n";
@@ -187,6 +183,3 @@ public class Inscription extends SuperAction {
 		return mapping.findForward(SUCCESS);
 	}
 }
-// Liste contenant les types d'extension acceptées pour le cv
-//List<String> listeExtension = Arrays.asList("pdf", "doc", "docx");
-//errors = Alumni.uploadFile(cv, "C:/Users/Dimitri/test/upload/CV/", listeExtension, TAILLE_MAX_FICHIER, errors, "cv");

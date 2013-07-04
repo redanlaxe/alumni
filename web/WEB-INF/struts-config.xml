@@ -20,8 +20,6 @@
             <form-property name="telephone"		type="java.lang.String"/>
             <form-property name="adresse"		type="java.lang.String"/> 
             <form-property name="dateNaissance"		type="java.lang.String"/>      
-            <form-property name="photoProfil"           type="org.apache.struts.upload.FormFile"/>     
-            <form-property name="cv"                    type="org.apache.struts.upload.FormFile"/>            
             <form-property name="compte"		type="java.lang.String"/>      
             <form-property name="souhaiteEmploi"	type="java.lang.String"/>      
         </form-bean>      
@@ -46,8 +44,6 @@
             <form-property name="adresse"			type="java.lang.String"/>
             <form-property name="dateNaissance"                 type="java.lang.String"/> 
             <form-property name="souhaiteEmploi"                type="java.lang.String"/>       
-            <form-property name="photoProfil"                   type="org.apache.struts.upload.FormFile"/>
-            <form-property name="cv"                            type="org.apache.struts.upload.FormFile"/>            
         </form-bean>   
 		 
         <form-bean name="ExperienceForm" type="org.apache.struts.action.DynaActionForm">
@@ -74,17 +70,8 @@
         <form-bean name="annuairepublicform" type="org.apache.struts.action.DynaActionForm">
             <form-property name="anneedeb" type="java.lang.String"/>
         </form-bean>    
-        <form-bean name="annuairepriveform" type="org.apache.struts.action.DynaActionForm">
-            <form-property name="anneedeb" type="java.lang.String"/>
-        </form-bean> 
         <form-bean name="statistique"           type="org.apache.struts.action.DynaActionForm"/>
         <form-bean name="validationform"           type="org.apache.struts.action.DynaActionForm"/>
-        <form-bean name="inscriptionadminform"           type="org.apache.struts.action.DynaActionForm">
-            <form-property name="nom" type="java.lang.String"/>
-            <form-property name="prenom" type="java.lang.String"/>
-            <form-property name="mail" type="java.lang.String"/>
-            <form-property name="mdp" type="java.lang.String"/>
-        </form-bean>
         <form-bean name="settings"           type="org.apache.struts.action.DynaActionForm"/>
     </form-beans>
     
@@ -100,9 +87,9 @@
         <forward name="annuaire"                        path="/annuairepublic.do"/>
         <forward name="annuairepublic"                  path="/annuairepublic.do"/>
         <forward name="profil"                          path="/profil.do"/>
-        <forward name="stats"                           path="/statistique.do"/>
-        <forward name="modifProfil"                     path="/modif_profil.jsp"/>
-        <forward name="validation"                      path="/validation.do"/>
+        <forward name="statistiques"                    path="/statistique.do"/>
+        <forward name="modifProfil"                     path="/profil_update.jsp"/>
+        <forward name="administration"                  path="/administration.do"/>
         <forward name="deconnexion"                     path="/deconnexion.do"/>
         <forward name="formation"                       path="/formation.jsp"/>
     </global-forwards>
@@ -114,7 +101,7 @@
                 scope="session" 
                 validate="true" 
                 input="/index.jsp">   
-            <forward name="successAdmin"		path="/validation.do" redirect="false" />
+            <forward name="successAdmin"		path="/administration.do" redirect="false" />
             <forward name="successContact"		path="/annuairepublic.do" redirect="false" />
             <forward name="successEtudiant"             path="/profil.do" redirect="false" />
             <forward name="echec" path="/index.jsp" redirect="false" />
@@ -125,9 +112,7 @@
                 scope="request"
                 input="/deconnexion">
             <forward name="success" path="/index.jsp" redirect="false" />
-        </action>
-        
-                        		
+        </action>  		
         <action path="/inscription/etudiant" 
                 type="com.alumni.controller.Inscription"
                 name="InscriptionFormEtudiant"
@@ -141,7 +126,72 @@
                 scope="request" 
                 input="/inscription_entreprise.jsp">
             <forward name="success" path="/index.jsp" redirect="false" />
-        </action>     
+        </action>                                              
+        <action path="/profil"
+                type="com.alumni.controller.Profil"
+                name="ProfilForm"
+                scope="request"
+                input="/profil.jsp">
+            <forward name="success" path="/profil.jsp" redirect="false" />
+            <forward name="success_show" path="/profil_read.jsp" redirect="false" />
+            <forward name="echec" path="/index.jsp" redirect="false" />             
+        </action>
+        <action path="/modifProfil"
+                type="com.alumni.controller.ModifProfil"
+                name="ModifProfilForm"
+                scope="request" 
+                input="/profil_update.jsp">
+            <forward name="success" path="/profil.do" redirect="false" />
+            <forward name="echec" path="/profil_update.jsp" redirect="false" /> 
+        </action>
+        <action path="/experience"
+                type="com.alumni.controller.Experience"
+                name="ExperienceForm"
+                scope="request"
+                input="/experience.jsp">
+                <forward name="success" path="/profil.do" redirect="false" />
+                <forward name="echec" path="/experience.jsp" redirect="false" />
+        </action>
+        <action path="/annuairepublic" 
+                type="com.alumni.controller.AnnuairePublic" 
+                input="/annuaire_public.jsp" 
+                scope="request"
+                name="annuairepublicform">
+                <forward name="success" path="/annuaire_public.jsp" redirect="false" />
+                <forward name="echec" path="/index.jsp" redirect="false" />
+        </action>
+        <action path="/administration" 
+                type="com.alumni.controller.Administration" 
+                input="/administration.jsp" 
+                scope="request"
+                name="validationform">
+                <forward name="success" path="/administration.jsp" redirect="false" />
+                <forward name="echec" path="/index.jsp" redirect="false" />
+        </action>
+        <action path="/statistique" 
+                type="com.alumni.controller.Statistique" 
+                name="statistique"
+                input="/statistiques.jsp" 
+                scope="request">
+        </action>
+        <action path="/formation"
+                type="com.alumni.controller.Formation"
+                name="FormationForm"
+                scope="request"
+                input="/formation.jsp">
+            <forward name="success" path="/profil.do" redirect="false" />
+            <forward name="echec" path="/formation.jsp" redirect="false" />
+        </action>
+        <action path="/settings" 
+                type="com.alumni.controller.Settings" 
+                name="settings"
+                input="/profil.jsp" 
+                scope="request">
+                <forward name="delete" path="/profil.do" redirect="false" />
+                <forward name="echec" path="/index.jsp" redirect="false" />
+                <forward name="update_form" path="/formation.jsp" redirect="false" />           
+        </action>
+        <!-- AJAX CALLS -->
         <action path="/getEntreprise"
                 type="com.alumni.controller.ajax.GetEntreprise"
                 scope="request">
@@ -156,98 +206,10 @@
                 type="com.alumni.controller.ajax.GetLibelleFormation"
                 scope="request">
         </action>  
-        
         <action path="/getEcoleFormation"
                 type="com.alumni.controller.ajax.GetEcoleFormation"
                 scope="request">
-        </action>                                                    
-                                                               
-        <action path="/profil"
-                type="com.alumni.controller.Profil"
-                name="ProfilForm"
-                scope="request"
-                input="/profil.jsp">
-            <forward name="success" path="/profil.jsp" redirect="false" />
-            <forward name="success_show" path="/profil_show.jsp" redirect="false" />
-            <forward name="echec" path="/index.jsp" redirect="false" />             
-        </action>
-        <action path="/modifProfil"
-                type="com.alumni.controller.ModifProfil"
-                name="ModifProfilForm"
-                scope="request" 
-                input="/modif_profil.jsp">
-            <forward name="success" path="/profil.do" redirect="false" />
-            <forward name="echec" path="/modif_profil.jsp" redirect="false" /> 
-        </action>
-        <action path="/experience"
-                type="com.alumni.controller.Experience"
-                name="ExperienceForm"
-                scope="request"
-                input="/experience.jsp">
-                <forward name="success" path="/profil.do" redirect="false" />
-                <forward name="echec" path="/experience.jsp" redirect="false" />
-        </action>
-
-        
-        <action path="/annuairepublic" 
-                type="com.alumni.controller.AnnuairePublic" 
-                input="/annuaire_public.jsp" 
-                scope="request"
-                name="annuairepublicform">
-                <forward name="success" path="/annuaire_public.jsp" redirect="false" />
-                <forward name="echec" path="/annuaire_public.jsp" redirect="false" />
-        </action>
-        
-        <action path="/validation" 
-                type="com.alumni.controller.Validation" 
-                input="/validation.jsp" 
-                scope="request"
-                name="validationform">
-                <forward name="success" path="/validation.jsp" redirect="false" />
-                <forward name="echec" path="/validation.jsp" redirect="false" />
-        </action>
-
-        <action path="/statistique" 
-                type="com.alumni.controller.Statistique" 
-                name="statistique"
-                input="/stats.jsp" 
-                scope="request">
-        </action>
-        
-         <action input="/inscription_admin.jsp" 
-                name="inscriptionadminform" 
-                path="/inscriptionadmin" 
-                scope="request" 
-                type="com.alumni.controller.InscriptionAdmin">
-            <forward name="success" path="/inscription_admin.jsp" redirect="false" />
-        </action>
-        <action path="/formation"
-                type="com.alumni.controller.Formation"
-                name="FormationForm"
-                scope="request"
-                input="/formation.jsp">
-            <forward name="success" path="/profil.do" redirect="false" />
-            <forward name="echec" path="/formation.jsp" redirect="false" />
-        </action>
-        <action path="/annuaireprive" 
-                type="com.alumni.controller.AnnuairePrive" 
-                input="/annuaire_prive.jsp" 
-                scope="request"
-                name="annuairepriveform">
-                <forward name="success" path="/annuaire_prive.jsp" redirect="false" />
-                <forward name="echec" path="/annuaire_prive.jsp" redirect="false" />
-        </action>
-        <action path="/settings" 
-                type="com.alumni.controller.Settings" 
-                name="settings"
-                input="/profil.jsp" 
-                scope="request">
-                <forward name="delete" path="/profil.do" redirect="false" />
-                <forward name="echec" path="/index.jsp" redirect="false" />
-                <forward name="update_form" path="/formation.jsp" redirect="false" />
-                <forward name="update_exp" path="/modif_experience.jsp" redirect="false" />            
-        </action>
-
+        </action>   
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>

@@ -68,12 +68,6 @@
                             </div>
                         </div>
                         <div class="control-group">
-                            <label class="control-label" for="cv"><bean:message key="label.cv" /></label>
-                            <div class="controls">
-                                <html:file styleId="cv" property="cv" />
-                            </div>
-                        </div>
-                        <div class="control-group">
                             <div class="controls end">
                                 <html:checkbox styleId="souhaiteEmploi" property="souhaiteEmploi" value="y">
                                     <label class="checkbox"></html:checkbox><bean:message key="label.souhaiteEmploi" /></label>

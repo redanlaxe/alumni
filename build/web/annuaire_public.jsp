@@ -18,7 +18,7 @@
 
             <html:form styleClass="form-inline" action="/annuairepublic">
                 <html:text property="anneedeb" styleId="anneedeb"/>
-                <html:submit styleClass="btn btn-primary" value="Filtrer"/>
+                <html:submit styleClass="btn btn-primary" value="Rechercher"/>
             </html:form>
             <logic:present name="etudiants">
                 <bean:size id="size" name="etudiants"/>
@@ -34,7 +34,6 @@
                             <th>Prenom</th>
                             <th>Nom</th>                            
                             <th>Téléphone</th>
-                            <th>CV</th>
                             <th>Email</th>
                             <th>Recherche Emploi</th>
                         </tr>
@@ -44,7 +43,6 @@
                                 <td><bean:write name="etudiant" property="prenom"/></td>
                                 <td><bean:write name="etudiant" property="nom"/></td>                                
                                 <td><bean:write name="etudiant" property="telephone"/></td>
-                                <td><a href="<bean:write name="etudiant" property="cv"/>">CV</a></td>
                                 <td><a href="mailto:<bean:write name="etudiant" property="mail"/>">Envoyer un mail</a></td>
                                 <td><logic:present name="etudiant" property="souhaiteemploi">
                                         <logic:equal name="etudiant" property="souhaiteemploi" value="y">

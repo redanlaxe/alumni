@@ -5,20 +5,20 @@
                 <a class="brand" href=""><img src="img/g/miage_couleur.jpg" alt="MIAGE Sorbonne"></a>
                 <ul class="nav">                    
                     <logic:present name="etudiant">
-                        <li><html:link forward="annuairepublic">Annuaire</html:link></li>
                         <li><html:link forward="profil">Mon profil</html:link></a></li>
+                        <li><html:link forward="annuairepublic">Annuaire</html:link></li>
                         <li><html:link forward="deconnexion">Déconnexion</html:link></li>
                     </logic:present>
                     <logic:present name="admin">
-                        <li><html:link forward="validation">Administration</html:link></li>
+                        <li><html:link forward="administration">Administration</html:link></li>
                         <li><html:link forward="annuairepublic">Annuaire</html:link></li>
-                        <li><html:link forward="stats">Statistiques</html:link></a></li>
+                        <li><html:link forward="statistiques">Statistiques</html:link></a></li>
                         <li><html:link forward="deconnexion">Déconnexion</html:link></li>
                     </logic:present>
                     <logic:present name="contact">
                         <li><html:link forward="annuairepublic">Annuaire</html:link></li>
-                        <li><a target="_blank" href="http://www.univ-paris1.fr/diplomes/miage/">MIAGE Sorbonne</a></li>
                         <li><html:link forward="deconnexion">Déconnexion</html:link></li>
+                        <li><a target="_blank" href="http://www.univ-paris1.fr/diplomes/miage/">MIAGE Sorbonne</a></li>
                     </logic:present>                    
                 </ul>
             </div>

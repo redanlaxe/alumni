@@ -94,7 +94,7 @@ create table alumni.etudiantannee(
 
 
 insert into alumni.administrateur(nom, prenom, mail, mdp) values
-('Admin', 'Admin', 'admin@admin.com','51abb9636078defbf888d8457a7c76f85c8f114c');
+('Admin', 'Admin', 'admin@alumni.com','00d70c561892a94980befd12a400e26aeb4b8599');
 
 insert into alumni.etudiant(nom, prenom, mail, mdp, adresse, telephone, dateNaissance, photoProfil, CV, souhaiteEmploi, validation) values
 ('DUPONT', 'Francois', 'francois@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '1 rue générale de gaulle 75001 PARIS', '0689236723', '1990-05-17', 'lien_photo', 'lien_cv','y','y'),
