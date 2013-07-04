@@ -429,3 +429,7 @@ span.competence,
 @media screen and (device-aspect-ratio:16/9){}
 
 @media screen and (device-aspect-ratio:1280/720){}
+
+.pagination {
+    text-align: center;
+}

@@ -168,7 +168,7 @@
                                                     plotShadow: false
                                                 },
                                                 title: {
-                                                    text: 'Type de contrat toute période'
+                                                    text: 'Général'
                                                 },
                                                 tooltip: {
                                                     pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -218,7 +218,7 @@
                                                     plotShadow: false
                                                 },
                                                 title: {
-                                                    text: 'Type de contrat 1ère embauche'
+                                                    text: '1er Contrat'
                                                 },
                                                 tooltip: {
                                                     pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -268,7 +268,7 @@
                                                     plotShadow: false
                                                 },
                                                 title: {
-                                                    text: 'Type de contrat actuel'
+                                                    text: 'À date'
                                                 },
                                                 tooltip: {
                                                     pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'

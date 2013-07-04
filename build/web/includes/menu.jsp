@@ -10,8 +10,8 @@
                         <li><html:link forward="deconnexion">Déconnexion</html:link></li>
                     </logic:present>
                     <logic:present name="admin">
+                        <li><html:link forward="validation">Administration</html:link></li>
                         <li><html:link forward="annuairepublic">Annuaire</html:link></li>
-                        <li><html:link forward="validation">Valider</html:link></li>
                         <li><html:link forward="stats">Statistiques</html:link></a></li>
                         <li><html:link forward="deconnexion">Déconnexion</html:link></li>
                     </logic:present>
