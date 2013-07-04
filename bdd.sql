@@ -98,20 +98,20 @@ insert into alumni.administrateur(nom, prenom, mail, mdp) values
 
 insert into alumni.etudiant(nom, prenom, mail, mdp, adresse, telephone, dateNaissance, photoProfil, CV, souhaiteEmploi, validation) values
 ('DUPONT', 'Francois', 'francois@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '1 rue générale de gaulle 75001 PARIS', '0689236723', '1990-05-17', 'lien_photo', 'lien_cv','y','y'),
-('MARTIN', 'nicolas', 'nicolas@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '23 boulevard de la gare 75013 PARIS', '0712348934', '1985-12-15', 'lien_photo', 'lien_cv','y','y'),
+('MARTIN', 'nicolas', 'nicolas@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '23 boulevard de la gare 75013 PARIS', '0712348934', '1985-12-15', 'lien_photo', 'lien_cv','n','y'),
 ('NICOLAS', 'Elodie', 'elodie@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '102 allée du passoir 75009 PARIS', '0134783423', '1989-03-01', 'lien_photo', 'lien_cv','y','y'),
 ('YVES', 'Lucie', 'lucie@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '3 rue de paris 75003 PARIS', '0812438945', '1990-04-08', 'lien_photo', 'lien_cv','y','y'),
 ('HERVE', 'Thierry', 'thierry@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '123 boulevard de la gare 75001 PARIS', '0123456789', '1990-10-02', 'lien_photo', 'lien_cv','y','y'),
 ('LESAGE', 'Franck', 'franck@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '23 rue de paris 75004 PARIS', '0412983469', '1992-08-22', 'lien_photo', 'lien_cv','y','n'),
 ('DERIEN', 'Luc', 'luc@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '88 allée cassiopée 75020 PARIS', '0134894756', '1987-09-18', 'lien_photo', 'lien_cv','y','n'),
-('PASCAL', 'Elisa', 'elisa@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '1 place étoile 75006 PARIS', '0745362984', '1986-11-28', 'lien_photo', 'lien_cv','y','n'),
+('PASCAL', 'Elisa', 'elisa@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '1 place étoile 75006 PARIS', '0745362984', '1986-11-28', 'lien_photo', 'lien_cv','n','n'),
 ('HERVE', 'Sophie', 'sophie@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '2 rue concorde 75003 PARIS', '0683926633', '1988-12-30', 'lien_photo', 'lien_cv','y','y'),
 ('HERVE', 'Sophia', 'sophia@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '23 boulevard de la gare 75004 PARIS', '0698340399', '1990-12-23', 'lien_photo', 'lien_cv','y','y'),
-('HERVE', 'Noemie', 'noemie@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '12 rue de metz 75001 PARIS', '0154738279', '1985-10-18', 'lien_photo', 'lien_cv','y','y'),
+('HERVE', 'Noemie', 'noemie@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '12 rue de metz 75001 PARIS', '0154738279', '1985-10-18', 'lien_photo', 'lien_cv','n','y'),
 ('HERVE', 'François', 'francois@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '65 boulevard ', '074829389', '1987-05-16', 'lien_photo', 'lien_cv','y','y'),
 ('HERVE', 'Alex', 'alex@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '132 rue du génie 75003 PARIS ', '0634827384', '1989-03-06', 'lien_photo', 'lien_cv','y','y'),
-('HERVE', 'Dayvid', 'dayvid@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '48 boulevard leclerc 75002 PARIS', '0749284765', '1992-04-09', 'lien_photo', 'lien_cv','y','y'),
-('HERVE', 'Cedric', 'cedric@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '34 rue tolbiac 75013 PARIS', '0187349834', '1990-03-24', 'lien_photo', 'lien_cv','y','y'),
+('HERVE', 'Dayvid', 'dayvid@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '48 boulevard leclerc 75002 PARIS', '0749284765', '1992-04-09', 'lien_photo', 'lien_cv','n','y'),
+('HERVE', 'Cedric', 'cedric@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '34 rue tolbiac 75013 PARIS', '0187349834', '1990-03-24', 'lien_photo', 'lien_cv','n','y'),
 ('HERVE', 'Dimitri', 'dimitri@gmail.com','00d70c561892a94980befd12a400e26aeb4b8599', '2 allée orion 75007 PARIS', '0734637277', '1990-02-11', 'lien_photo', 'lien_cv','y','y');
 
 
@@ -131,7 +131,7 @@ insert into alumni.contact(nom, prenom, mail, mdp, telephone, poste, idEntrepris
 ('MARTIN', 'CLAUDE', 'claude@bnp.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0611223344', 'chef de projet', 6, 'y'),
 ('KHAUV', 'Thierry', 'thierry@tidda.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0621728179', 'CEO', 3, 'y'),
 ('HUNAULT', 'Alexandre', 'alexandre@tidda.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0634928734', 'CEO', 3, 'y'),
-('KAYAL', 'Dayvid', 'dayvid@tidda.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0694827456', 'CEO', 3, 'y'),
+('KAYAL', 'Dayvid', 'dayvid@tidda.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0694827456', 'CEO', 3, 'y');
 ('NI', 'Nicolas', 'nicolas@airfrance.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0799833462', 'Developpeur PHP', 1, 'y'),
 ('RO', 'Romain', 'romain@monnaiedeparis.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0645928923', 'ingénieur études', 2, 'y'),
 ('LA', 'Laurent', 'laurent@renault.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0723119977', 'consultant interne', 7, 'y');
@@ -144,10 +144,14 @@ INSERT INTO ALUMNI.EXPERIENCE (IDENTREPRISE, IDETUDIANT, TYPECONTRAT, DEBUT, FIN
 (6, 3, 'cdd', '2010-11-15', '2013-11-03', 'developpeur JAVA'),
 (6, 4, 'cdd', '2005-12-04', '2006-10-30', 'chargé référencement'),
 (4, 5, 'cdi', '2007-08-13', '2009-02-09', 'consultant ERP'),
-(5, 5, 'cdi', '2000-02-23', '2010-01-12', 'developpeur C++');
+(5, 5, 'cdi', '2000-02-23', '2010-01-12', 'developpeur C++'),
+(1, 10, 'stage', '2010-04-01', '2010-07-31', 'stagiaire développeur PHP'),
+(2, 13, 'stage', '2009-01-02', '2009-06-30', 'stagiaire assistant chef de projet'),
+(2, 14, 'stage', '2011-06-01', '2011-09-30', 'stagiaire architecte'),
+(5, 15, 'stage', '2013-04-01', '2013-09-01', 'stagiaire business intelligence');
 
 INSERT INTO alumni.competence (idExperience, libelle) VALUES
-(3, 'C'),
+(3, 'PHP'),
 (3, 'C++'),
 (3, 'C#'),
 (3, 'HTML'),
@@ -155,22 +159,22 @@ INSERT INTO alumni.competence (idExperience, libelle) VALUES
 (3, 'Javascript'),
 (3, 'J2EE'),
 (4, 'HTML'),
-(4, 'ERP'),
+(4, 'PHP'),
 (4, 'SAP'),
 (4, 'BO'),
 (4, 'SQL'),
-(2, 'AGILE'),
+(2, 'PHP'),
 (2, 'SCRUM'),
-(2, 'CYCLE CASCADE'),
+(2, 'HTML'),
 (6, 'PHP'),
 (6, 'WORDPRESS'),
-(6, 'SYMFONY'),
-(1, 'C++'),
+(6, 'HTML'),
+(1, 'PHP'),
 (1, '.NET'),
-(1, 'C'),
-(5, 'JAVA'),
+(1, 'HTML'),
+(5, 'HTML'),
 (5, '.NET'),
-(5, 'J2EE');
+(5, 'PHP');
 
 INSERT INTO alumni.salaire (idExperience, valeur, annee) VALUES
 (1, 37000, 2010),
