@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 9 avr. 2013 21:29:21 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="com.alumni.mapping.Etudiant" table="ETUDIANT" schema="ALUMNI">
         <id name="idetudiant" type="int">

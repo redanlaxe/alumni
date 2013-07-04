@@ -1,5 +1,4 @@
 package com.alumni.mapping;
-// Generated 9 avr. 2013 21:29:11 by Hibernate Tools 3.2.1.GA
 
 
 

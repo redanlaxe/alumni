@@ -918,8 +918,6 @@ public class AlumniService implements AlumniServiceDAO {
             etId.setIdformation(idFormation);
             
             session.delete(etId);
-          //  System.out.println("DELETE FROM ALUMNI.ETUDIANTANNEE  as ae WHERE ae.idformation="+idFormation+ " AND ae.idetudiant="+idEtudiant);
-          //  session.createSQLQuery("DELETE FROM ALUMNI.ETUDIANTANNEE  as ae WHERE ae.idformation="+idFormation+ " AND ae.idetudiant="+idEtudiant);
             session.getTransaction().commit();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
