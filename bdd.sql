@@ -131,7 +131,7 @@ insert into alumni.contact(nom, prenom, mail, mdp, telephone, poste, idEntrepris
 ('MARTIN', 'CLAUDE', 'claude@bnp.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0611223344', 'chef de projet', 6, 'y'),
 ('KHAUV', 'Thierry', 'thierry@tidda.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0621728179', 'CEO', 3, 'y'),
 ('HUNAULT', 'Alexandre', 'alexandre@tidda.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0634928734', 'CEO', 3, 'y'),
-('KAYAL', 'Dayvid', 'dayvid@tidda.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0694827456', 'CEO', 3, 'y');
+('KAYAL', 'Dayvid', 'dayvid@tidda.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0694827456', 'CEO', 3, 'y'),
 ('NI', 'Nicolas', 'nicolas@airfrance.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0799833462', 'Developpeur PHP', 1, 'y'),
 ('RO', 'Romain', 'romain@monnaiedeparis.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0645928923', 'ingénieur études', 2, 'y'),
 ('LA', 'Laurent', 'laurent@renault.fr', '00d70c561892a94980befd12a400e26aeb4b8599', '0723119977', 'consultant interne', 7, 'y');
